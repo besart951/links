@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package links.backend.v1;
+
+option go_package = "github.com/links/backend/internal/gen/proto/links/backend/v1;backendv1";
+
+service BackendService {
+  rpc GetHealth(GetHealthRequest) returns (GetHealthResponse);
+}
+
+message GetHealthRequest {}
+
+message GetHealthResponse {
+  string status = 1;
+  string db = 2;
+}

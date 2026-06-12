@@ -1,0 +1,64 @@
+# ─── API backend ─────────────────────────────────────────────────────────────
+server {
+    listen       80;
+    server_name  api.${DOMAIN};
+
+    location / {
+        proxy_pass         http://backend:${PORT_BACKEND};
+        proxy_http_version 1.1;
+        proxy_set_header   Host       $host;
+        proxy_set_header   X-Real-IP  $remote_addr;
+        proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+
+# ─── Landing page – main domain ──────────────────────────────────────────────
+server {
+    listen       80;
+    server_name  ${DOMAIN} www.${DOMAIN};
+
+    location / {
+        proxy_pass         http://landing:${PORT_LANDING};
+        proxy_http_version 1.1;
+        proxy_set_header   Upgrade    $http_upgrade;
+        proxy_set_header   Connection 'upgrade';
+        proxy_set_header   Host       $host;
+        proxy_set_header   X-Real-IP  $remote_addr;
+        proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+# ─── Admin panel ──────────────────────────────────────────────────────────────
+server {
+    listen       80;
+    server_name  admin.${DOMAIN};
+
+    location / {
+        proxy_pass         http://admin:${PORT_ADMIN};
+        proxy_http_version 1.1;
+        proxy_set_header   Upgrade    $http_upgrade;
+        proxy_set_header   Connection 'upgrade';
+        proxy_set_header   Host       $host;
+        proxy_set_header   X-Real-IP  $remote_addr;
+        proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+# ─── Support portal ───────────────────────────────────────────────────────────
+server {
+    listen       80;
+    server_name  support.${DOMAIN};
+
+    location / {
+        proxy_pass         http://support:${PORT_SUPPORT};
+        proxy_http_version 1.1;
+        proxy_set_header   Upgrade    $http_upgrade;
+        proxy_set_header   Connection 'upgrade';
+        proxy_set_header   Host       $host;
+        proxy_set_header   X-Real-IP  $remote_addr;
+        proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_cache_bypass $http_upgrade;
+    }
+}

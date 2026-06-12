@@ -4,6 +4,8 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+	// Load the central .env from the repo root
+	envDir: new URL('../../../', import.meta.url).pathname,
 	plugins: [
 		tailwindcss(),
 		sveltekit({

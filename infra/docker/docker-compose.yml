@@ -1,0 +1,83 @@
+# Run from repo root so compose picks up the central .env automatically:
+#   docker compose --env-file .env -f infra/docker/docker-compose.yml up -d
+#
+# Or use the Makefile shortcuts at the repo root.
+
+services:
+
+  # ── Database (internal only – not exposed to host) ───────────────────────
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB:       ${DB_NAME}
+      POSTGRES_USER:     ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ── Backend ──────────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: ../../app/backend
+    expose:
+      - "${PORT_BACKEND:-4000}"
+    env_file: ../../.env
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # ── Reverse proxy ────────────────────────────────────────────────────────
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "${PORT_NGINX:-80}:80"
+    volumes:
+      - ../nginx/nginx.conf.template:/etc/nginx/templates/nginx.conf.template:ro
+      - ../nginx/entrypoint.sh:/entrypoint.sh:ro
+    entrypoint: ["/bin/sh", "/entrypoint.sh"]
+    env_file: ../../.env
+    depends_on:
+      - backend
+      - landing
+      - admin
+      - support
+    restart: unless-stopped
+
+  # ── Web apps ─────────────────────────────────────────────────────────────
+  # TODO: add a Dockerfile to each app/web/* directory and uncomment build:
+  landing:
+    # build:
+    #   context: ../../app/web/landing
+    image: node:22-alpine          # replace with your built image
+    expose:
+      - "${PORT_LANDING:-3000}"
+    env_file: ../../.env
+    restart: unless-stopped
+
+  admin:
+    # build:
+    #   context: ../../app/web/admin
+    image: node:22-alpine          # replace with your built image
+    expose:
+      - "${PORT_ADMIN:-3001}"
+    env_file: ../../.env
+    restart: unless-stopped
+
+  support:
+    # build:
+    #   context: ../../app/web/support
+    image: node:22-alpine          # replace with your built image
+    expose:
+      - "${PORT_SUPPORT:-3002}"
+    env_file: ../../.env
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

@@ -1,2 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	let { data } = $props();
+</script>
+
+<h1>Admin</h1>
+<p>Backend status: {data.health.status}</p>
+<p>Database status: {data.health.db}</p>
