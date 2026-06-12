@@ -1,0 +1,7 @@
+packages:
+  - "app/web/*"
+  - "app/desktop/*"
+  - "packages/*"
+allowBuilds:
+  "@tailwindcss/oxide": true
+  esbuild: true

@@ -1,0 +1,34 @@
+node_modules
+
+# Package manager
+.pnpm-store
+
+# Monorepo dependencies/build output
+**/node_modules/
+**/.svelte-kit/
+**/dist/
+**/build/
+**/.output/
+**/.vercel/
+**/.netlify/
+**/.wrangler/
+**/.vite/
+**/coverage/
+
+# Editor folders in app packages
+app/web/*/.vscode/
+packages/*/.vscode/
+
+# Env files
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.test
+
+# OS files
+**/.DS_Store
+**/Thumbs.db
+
+# Vite temp files
+**/vite.config.js.timestamp-*
+**/vite.config.ts.timestamp-*
