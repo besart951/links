@@ -14,6 +14,7 @@
 		"format": "prettier --write ."
 	},
 	"files": [
+		"src",
 		"dist",
 		"!dist/**/*.test.*",
 		"!dist/**/*.spec.*"
@@ -21,17 +22,30 @@
 	"sideEffects": [
 		"**/*.css"
 	],
-	"svelte": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"svelte": "./src/lib/index.ts",
+	"types": "./src/lib/index.ts",
 	"type": "module",
 	"exports": {
 		".": {
-			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js"
+			"types": "./src/lib/index.ts",
+			"svelte": "./src/lib/index.ts",
+			"default": "./src/lib/index.ts"
+		},
+		"./access": {
+			"svelte": "./src/lib/components/access/access.svelte",
+			"default": "./src/lib/components/access/access.svelte"
+		},
+		"./auth-store": {
+			"types": "./src/lib/auth-store.ts",
+			"default": "./src/lib/auth-store.ts"
 		}
 	},
 	"peerDependencies": {
 		"svelte": "^5.0.0"
+	},
+	"dependencies": {
+		"@links/access-core": "workspace:*",
+		"@links/auth-client": "workspace:*"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",

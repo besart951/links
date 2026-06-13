@@ -28,6 +28,12 @@ func main() {
 
 	ctx := context.Background()
 
+	if err := db.Migrate(ctx, cfg.DatabaseURL); err != nil {
+		slog.Error("database migration failed", "err", err)
+		os.Exit(1)
+	}
+	slog.Info("database migrations applied")
+
 	pool, err := db.Connect(ctx, cfg.DatabaseURL)
 	if err != nil {
 		slog.Error("database connection failed", "err", err)

@@ -14,8 +14,3 @@ plugins:
     out: ../rpc-client/src/gen
     opt:
       - target=ts
-
-  - plugin: buf.build/connectrpc/es
-    out: ../rpc-client/src/gen
-    opt:
-      - target=ts

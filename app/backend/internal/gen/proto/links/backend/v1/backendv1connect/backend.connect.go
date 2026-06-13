@@ -23,6 +23,20 @@ const _ = connect.IsAtLeastVersion1_13_0
 const (
 	// BackendServiceName is the fully-qualified name of the BackendService service.
 	BackendServiceName = "links.backend.v1.BackendService"
+	// AuthServiceName is the fully-qualified name of the AuthService service.
+	AuthServiceName = "links.backend.v1.AuthService"
+	// TenantServiceName is the fully-qualified name of the TenantService service.
+	TenantServiceName = "links.backend.v1.TenantService"
+	// EntitlementServiceName is the fully-qualified name of the EntitlementService service.
+	EntitlementServiceName = "links.backend.v1.EntitlementService"
+	// MembershipServiceName is the fully-qualified name of the MembershipService service.
+	MembershipServiceName = "links.backend.v1.MembershipService"
+	// LicensingServiceName is the fully-qualified name of the LicensingService service.
+	LicensingServiceName = "links.backend.v1.LicensingService"
+	// AssignmentServiceName is the fully-qualified name of the AssignmentService service.
+	AssignmentServiceName = "links.backend.v1.AssignmentService"
+	// DemoServiceName is the fully-qualified name of the DemoService service.
+	DemoServiceName = "links.backend.v1.DemoService"
 )
 
 // These constants are the fully-qualified names of the RPCs defined in this package. They're
@@ -36,6 +50,59 @@ const (
 	// BackendServiceGetHealthProcedure is the fully-qualified name of the BackendService's GetHealth
 	// RPC.
 	BackendServiceGetHealthProcedure = "/links.backend.v1.BackendService/GetHealth"
+	// AuthServiceRegisterProcedure is the fully-qualified name of the AuthService's Register RPC.
+	AuthServiceRegisterProcedure = "/links.backend.v1.AuthService/Register"
+	// AuthServiceLoginProcedure is the fully-qualified name of the AuthService's Login RPC.
+	AuthServiceLoginProcedure = "/links.backend.v1.AuthService/Login"
+	// AuthServiceLogoutProcedure is the fully-qualified name of the AuthService's Logout RPC.
+	AuthServiceLogoutProcedure = "/links.backend.v1.AuthService/Logout"
+	// AuthServiceGetSessionProcedure is the fully-qualified name of the AuthService's GetSession RPC.
+	AuthServiceGetSessionProcedure = "/links.backend.v1.AuthService/GetSession"
+	// TenantServiceListMyTenantsProcedure is the fully-qualified name of the TenantService's
+	// ListMyTenants RPC.
+	TenantServiceListMyTenantsProcedure = "/links.backend.v1.TenantService/ListMyTenants"
+	// TenantServiceSwitchTenantProcedure is the fully-qualified name of the TenantService's
+	// SwitchTenant RPC.
+	TenantServiceSwitchTenantProcedure = "/links.backend.v1.TenantService/SwitchTenant"
+	// EntitlementServiceGetAccessSnapshotProcedure is the fully-qualified name of the
+	// EntitlementService's GetAccessSnapshot RPC.
+	EntitlementServiceGetAccessSnapshotProcedure = "/links.backend.v1.EntitlementService/GetAccessSnapshot"
+	// MembershipServiceListTenantMembersProcedure is the fully-qualified name of the
+	// MembershipService's ListTenantMembers RPC.
+	MembershipServiceListTenantMembersProcedure = "/links.backend.v1.MembershipService/ListTenantMembers"
+	// MembershipServiceInviteTenantMemberProcedure is the fully-qualified name of the
+	// MembershipService's InviteTenantMember RPC.
+	MembershipServiceInviteTenantMemberProcedure = "/links.backend.v1.MembershipService/InviteTenantMember"
+	// MembershipServiceAcceptTenantInviteProcedure is the fully-qualified name of the
+	// MembershipService's AcceptTenantInvite RPC.
+	MembershipServiceAcceptTenantInviteProcedure = "/links.backend.v1.MembershipService/AcceptTenantInvite"
+	// LicensingServiceGetTenantLicensesProcedure is the fully-qualified name of the LicensingService's
+	// GetTenantLicenses RPC.
+	LicensingServiceGetTenantLicensesProcedure = "/links.backend.v1.LicensingService/GetTenantLicenses"
+	// LicensingServiceSetMyTenantProductSeatsProcedure is the fully-qualified name of the
+	// LicensingService's SetMyTenantProductSeats RPC.
+	LicensingServiceSetMyTenantProductSeatsProcedure = "/links.backend.v1.LicensingService/SetMyTenantProductSeats"
+	// LicensingServiceListLicenseEventsProcedure is the fully-qualified name of the LicensingService's
+	// ListLicenseEvents RPC.
+	LicensingServiceListLicenseEventsProcedure = "/links.backend.v1.LicensingService/ListLicenseEvents"
+	// AssignmentServiceListProductAssignmentsProcedure is the fully-qualified name of the
+	// AssignmentService's ListProductAssignments RPC.
+	AssignmentServiceListProductAssignmentsProcedure = "/links.backend.v1.AssignmentService/ListProductAssignments"
+	// AssignmentServiceAssignUserToProductProcedure is the fully-qualified name of the
+	// AssignmentService's AssignUserToProduct RPC.
+	AssignmentServiceAssignUserToProductProcedure = "/links.backend.v1.AssignmentService/AssignUserToProduct"
+	// AssignmentServiceRemoveUserFromProductProcedure is the fully-qualified name of the
+	// AssignmentService's RemoveUserFromProduct RPC.
+	AssignmentServiceRemoveUserFromProductProcedure = "/links.backend.v1.AssignmentService/RemoveUserFromProduct"
+	// AssignmentServiceUpdateProductRoleProcedure is the fully-qualified name of the
+	// AssignmentService's UpdateProductRole RPC.
+	AssignmentServiceUpdateProductRoleProcedure = "/links.backend.v1.AssignmentService/UpdateProductRole"
+	// DemoServiceGetPlannerDemoProcedure is the fully-qualified name of the DemoService's
+	// GetPlannerDemo RPC.
+	DemoServiceGetPlannerDemoProcedure = "/links.backend.v1.DemoService/GetPlannerDemo"
+	// DemoServiceGetFinanceDemoProcedure is the fully-qualified name of the DemoService's
+	// GetFinanceDemo RPC.
+	DemoServiceGetFinanceDemoProcedure = "/links.backend.v1.DemoService/GetFinanceDemo"
 )
 
 // BackendServiceClient is a client for the links.backend.v1.BackendService service.
@@ -106,4 +173,807 @@ type UnimplementedBackendServiceHandler struct{}
 
 func (UnimplementedBackendServiceHandler) GetHealth(context.Context, *connect.Request[v1.GetHealthRequest]) (*connect.Response[v1.GetHealthResponse], error) {
 	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.BackendService.GetHealth is not implemented"))
+}
+
+// AuthServiceClient is a client for the links.backend.v1.AuthService service.
+type AuthServiceClient interface {
+	Register(context.Context, *connect.Request[v1.RegisterRequest]) (*connect.Response[v1.AuthResponse], error)
+	Login(context.Context, *connect.Request[v1.LoginRequest]) (*connect.Response[v1.AuthResponse], error)
+	Logout(context.Context, *connect.Request[v1.LogoutRequest]) (*connect.Response[v1.LogoutResponse], error)
+	GetSession(context.Context, *connect.Request[v1.GetSessionRequest]) (*connect.Response[v1.GetSessionResponse], error)
+}
+
+// NewAuthServiceClient constructs a client for the links.backend.v1.AuthService service. By
+// default, it uses the Connect protocol with the binary Protobuf Codec, asks for gzipped responses,
+// and sends uncompressed requests. To use the gRPC or gRPC-Web protocols, supply the
+// connect.WithGRPC() or connect.WithGRPCWeb() options.
+//
+// The URL supplied here should be the base URL for the Connect or gRPC server (for example,
+// http://api.acme.com or https://acme.com/grpc).
+func NewAuthServiceClient(httpClient connect.HTTPClient, baseURL string, opts ...connect.ClientOption) AuthServiceClient {
+	baseURL = strings.TrimRight(baseURL, "/")
+	authServiceMethods := v1.File_proto_links_backend_v1_backend_proto.Services().ByName("AuthService").Methods()
+	return &authServiceClient{
+		register: connect.NewClient[v1.RegisterRequest, v1.AuthResponse](
+			httpClient,
+			baseURL+AuthServiceRegisterProcedure,
+			connect.WithSchema(authServiceMethods.ByName("Register")),
+			connect.WithClientOptions(opts...),
+		),
+		login: connect.NewClient[v1.LoginRequest, v1.AuthResponse](
+			httpClient,
+			baseURL+AuthServiceLoginProcedure,
+			connect.WithSchema(authServiceMethods.ByName("Login")),
+			connect.WithClientOptions(opts...),
+		),
+		logout: connect.NewClient[v1.LogoutRequest, v1.LogoutResponse](
+			httpClient,
+			baseURL+AuthServiceLogoutProcedure,
+			connect.WithSchema(authServiceMethods.ByName("Logout")),
+			connect.WithClientOptions(opts...),
+		),
+		getSession: connect.NewClient[v1.GetSessionRequest, v1.GetSessionResponse](
+			httpClient,
+			baseURL+AuthServiceGetSessionProcedure,
+			connect.WithSchema(authServiceMethods.ByName("GetSession")),
+			connect.WithClientOptions(opts...),
+		),
+	}
+}
+
+// authServiceClient implements AuthServiceClient.
+type authServiceClient struct {
+	register   *connect.Client[v1.RegisterRequest, v1.AuthResponse]
+	login      *connect.Client[v1.LoginRequest, v1.AuthResponse]
+	logout     *connect.Client[v1.LogoutRequest, v1.LogoutResponse]
+	getSession *connect.Client[v1.GetSessionRequest, v1.GetSessionResponse]
+}
+
+// Register calls links.backend.v1.AuthService.Register.
+func (c *authServiceClient) Register(ctx context.Context, req *connect.Request[v1.RegisterRequest]) (*connect.Response[v1.AuthResponse], error) {
+	return c.register.CallUnary(ctx, req)
+}
+
+// Login calls links.backend.v1.AuthService.Login.
+func (c *authServiceClient) Login(ctx context.Context, req *connect.Request[v1.LoginRequest]) (*connect.Response[v1.AuthResponse], error) {
+	return c.login.CallUnary(ctx, req)
+}
+
+// Logout calls links.backend.v1.AuthService.Logout.
+func (c *authServiceClient) Logout(ctx context.Context, req *connect.Request[v1.LogoutRequest]) (*connect.Response[v1.LogoutResponse], error) {
+	return c.logout.CallUnary(ctx, req)
+}
+
+// GetSession calls links.backend.v1.AuthService.GetSession.
+func (c *authServiceClient) GetSession(ctx context.Context, req *connect.Request[v1.GetSessionRequest]) (*connect.Response[v1.GetSessionResponse], error) {
+	return c.getSession.CallUnary(ctx, req)
+}
+
+// AuthServiceHandler is an implementation of the links.backend.v1.AuthService service.
+type AuthServiceHandler interface {
+	Register(context.Context, *connect.Request[v1.RegisterRequest]) (*connect.Response[v1.AuthResponse], error)
+	Login(context.Context, *connect.Request[v1.LoginRequest]) (*connect.Response[v1.AuthResponse], error)
+	Logout(context.Context, *connect.Request[v1.LogoutRequest]) (*connect.Response[v1.LogoutResponse], error)
+	GetSession(context.Context, *connect.Request[v1.GetSessionRequest]) (*connect.Response[v1.GetSessionResponse], error)
+}
+
+// NewAuthServiceHandler builds an HTTP handler from the service implementation. It returns the path
+// on which to mount the handler and the handler itself.
+//
+// By default, handlers support the Connect, gRPC, and gRPC-Web protocols with the binary Protobuf
+// and JSON codecs. They also support gzip compression.
+func NewAuthServiceHandler(svc AuthServiceHandler, opts ...connect.HandlerOption) (string, http.Handler) {
+	authServiceMethods := v1.File_proto_links_backend_v1_backend_proto.Services().ByName("AuthService").Methods()
+	authServiceRegisterHandler := connect.NewUnaryHandler(
+		AuthServiceRegisterProcedure,
+		svc.Register,
+		connect.WithSchema(authServiceMethods.ByName("Register")),
+		connect.WithHandlerOptions(opts...),
+	)
+	authServiceLoginHandler := connect.NewUnaryHandler(
+		AuthServiceLoginProcedure,
+		svc.Login,
+		connect.WithSchema(authServiceMethods.ByName("Login")),
+		connect.WithHandlerOptions(opts...),
+	)
+	authServiceLogoutHandler := connect.NewUnaryHandler(
+		AuthServiceLogoutProcedure,
+		svc.Logout,
+		connect.WithSchema(authServiceMethods.ByName("Logout")),
+		connect.WithHandlerOptions(opts...),
+	)
+	authServiceGetSessionHandler := connect.NewUnaryHandler(
+		AuthServiceGetSessionProcedure,
+		svc.GetSession,
+		connect.WithSchema(authServiceMethods.ByName("GetSession")),
+		connect.WithHandlerOptions(opts...),
+	)
+	return "/links.backend.v1.AuthService/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case AuthServiceRegisterProcedure:
+			authServiceRegisterHandler.ServeHTTP(w, r)
+		case AuthServiceLoginProcedure:
+			authServiceLoginHandler.ServeHTTP(w, r)
+		case AuthServiceLogoutProcedure:
+			authServiceLogoutHandler.ServeHTTP(w, r)
+		case AuthServiceGetSessionProcedure:
+			authServiceGetSessionHandler.ServeHTTP(w, r)
+		default:
+			http.NotFound(w, r)
+		}
+	})
+}
+
+// UnimplementedAuthServiceHandler returns CodeUnimplemented from all methods.
+type UnimplementedAuthServiceHandler struct{}
+
+func (UnimplementedAuthServiceHandler) Register(context.Context, *connect.Request[v1.RegisterRequest]) (*connect.Response[v1.AuthResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.AuthService.Register is not implemented"))
+}
+
+func (UnimplementedAuthServiceHandler) Login(context.Context, *connect.Request[v1.LoginRequest]) (*connect.Response[v1.AuthResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.AuthService.Login is not implemented"))
+}
+
+func (UnimplementedAuthServiceHandler) Logout(context.Context, *connect.Request[v1.LogoutRequest]) (*connect.Response[v1.LogoutResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.AuthService.Logout is not implemented"))
+}
+
+func (UnimplementedAuthServiceHandler) GetSession(context.Context, *connect.Request[v1.GetSessionRequest]) (*connect.Response[v1.GetSessionResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.AuthService.GetSession is not implemented"))
+}
+
+// TenantServiceClient is a client for the links.backend.v1.TenantService service.
+type TenantServiceClient interface {
+	ListMyTenants(context.Context, *connect.Request[v1.ListMyTenantsRequest]) (*connect.Response[v1.ListMyTenantsResponse], error)
+	SwitchTenant(context.Context, *connect.Request[v1.SwitchTenantRequest]) (*connect.Response[v1.AccessSnapshotResponse], error)
+}
+
+// NewTenantServiceClient constructs a client for the links.backend.v1.TenantService service. By
+// default, it uses the Connect protocol with the binary Protobuf Codec, asks for gzipped responses,
+// and sends uncompressed requests. To use the gRPC or gRPC-Web protocols, supply the
+// connect.WithGRPC() or connect.WithGRPCWeb() options.
+//
+// The URL supplied here should be the base URL for the Connect or gRPC server (for example,
+// http://api.acme.com or https://acme.com/grpc).
+func NewTenantServiceClient(httpClient connect.HTTPClient, baseURL string, opts ...connect.ClientOption) TenantServiceClient {
+	baseURL = strings.TrimRight(baseURL, "/")
+	tenantServiceMethods := v1.File_proto_links_backend_v1_backend_proto.Services().ByName("TenantService").Methods()
+	return &tenantServiceClient{
+		listMyTenants: connect.NewClient[v1.ListMyTenantsRequest, v1.ListMyTenantsResponse](
+			httpClient,
+			baseURL+TenantServiceListMyTenantsProcedure,
+			connect.WithSchema(tenantServiceMethods.ByName("ListMyTenants")),
+			connect.WithClientOptions(opts...),
+		),
+		switchTenant: connect.NewClient[v1.SwitchTenantRequest, v1.AccessSnapshotResponse](
+			httpClient,
+			baseURL+TenantServiceSwitchTenantProcedure,
+			connect.WithSchema(tenantServiceMethods.ByName("SwitchTenant")),
+			connect.WithClientOptions(opts...),
+		),
+	}
+}
+
+// tenantServiceClient implements TenantServiceClient.
+type tenantServiceClient struct {
+	listMyTenants *connect.Client[v1.ListMyTenantsRequest, v1.ListMyTenantsResponse]
+	switchTenant  *connect.Client[v1.SwitchTenantRequest, v1.AccessSnapshotResponse]
+}
+
+// ListMyTenants calls links.backend.v1.TenantService.ListMyTenants.
+func (c *tenantServiceClient) ListMyTenants(ctx context.Context, req *connect.Request[v1.ListMyTenantsRequest]) (*connect.Response[v1.ListMyTenantsResponse], error) {
+	return c.listMyTenants.CallUnary(ctx, req)
+}
+
+// SwitchTenant calls links.backend.v1.TenantService.SwitchTenant.
+func (c *tenantServiceClient) SwitchTenant(ctx context.Context, req *connect.Request[v1.SwitchTenantRequest]) (*connect.Response[v1.AccessSnapshotResponse], error) {
+	return c.switchTenant.CallUnary(ctx, req)
+}
+
+// TenantServiceHandler is an implementation of the links.backend.v1.TenantService service.
+type TenantServiceHandler interface {
+	ListMyTenants(context.Context, *connect.Request[v1.ListMyTenantsRequest]) (*connect.Response[v1.ListMyTenantsResponse], error)
+	SwitchTenant(context.Context, *connect.Request[v1.SwitchTenantRequest]) (*connect.Response[v1.AccessSnapshotResponse], error)
+}
+
+// NewTenantServiceHandler builds an HTTP handler from the service implementation. It returns the
+// path on which to mount the handler and the handler itself.
+//
+// By default, handlers support the Connect, gRPC, and gRPC-Web protocols with the binary Protobuf
+// and JSON codecs. They also support gzip compression.
+func NewTenantServiceHandler(svc TenantServiceHandler, opts ...connect.HandlerOption) (string, http.Handler) {
+	tenantServiceMethods := v1.File_proto_links_backend_v1_backend_proto.Services().ByName("TenantService").Methods()
+	tenantServiceListMyTenantsHandler := connect.NewUnaryHandler(
+		TenantServiceListMyTenantsProcedure,
+		svc.ListMyTenants,
+		connect.WithSchema(tenantServiceMethods.ByName("ListMyTenants")),
+		connect.WithHandlerOptions(opts...),
+	)
+	tenantServiceSwitchTenantHandler := connect.NewUnaryHandler(
+		TenantServiceSwitchTenantProcedure,
+		svc.SwitchTenant,
+		connect.WithSchema(tenantServiceMethods.ByName("SwitchTenant")),
+		connect.WithHandlerOptions(opts...),
+	)
+	return "/links.backend.v1.TenantService/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case TenantServiceListMyTenantsProcedure:
+			tenantServiceListMyTenantsHandler.ServeHTTP(w, r)
+		case TenantServiceSwitchTenantProcedure:
+			tenantServiceSwitchTenantHandler.ServeHTTP(w, r)
+		default:
+			http.NotFound(w, r)
+		}
+	})
+}
+
+// UnimplementedTenantServiceHandler returns CodeUnimplemented from all methods.
+type UnimplementedTenantServiceHandler struct{}
+
+func (UnimplementedTenantServiceHandler) ListMyTenants(context.Context, *connect.Request[v1.ListMyTenantsRequest]) (*connect.Response[v1.ListMyTenantsResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.TenantService.ListMyTenants is not implemented"))
+}
+
+func (UnimplementedTenantServiceHandler) SwitchTenant(context.Context, *connect.Request[v1.SwitchTenantRequest]) (*connect.Response[v1.AccessSnapshotResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.TenantService.SwitchTenant is not implemented"))
+}
+
+// EntitlementServiceClient is a client for the links.backend.v1.EntitlementService service.
+type EntitlementServiceClient interface {
+	GetAccessSnapshot(context.Context, *connect.Request[v1.GetAccessSnapshotRequest]) (*connect.Response[v1.AccessSnapshotResponse], error)
+}
+
+// NewEntitlementServiceClient constructs a client for the links.backend.v1.EntitlementService
+// service. By default, it uses the Connect protocol with the binary Protobuf Codec, asks for
+// gzipped responses, and sends uncompressed requests. To use the gRPC or gRPC-Web protocols, supply
+// the connect.WithGRPC() or connect.WithGRPCWeb() options.
+//
+// The URL supplied here should be the base URL for the Connect or gRPC server (for example,
+// http://api.acme.com or https://acme.com/grpc).
+func NewEntitlementServiceClient(httpClient connect.HTTPClient, baseURL string, opts ...connect.ClientOption) EntitlementServiceClient {
+	baseURL = strings.TrimRight(baseURL, "/")
+	entitlementServiceMethods := v1.File_proto_links_backend_v1_backend_proto.Services().ByName("EntitlementService").Methods()
+	return &entitlementServiceClient{
+		getAccessSnapshot: connect.NewClient[v1.GetAccessSnapshotRequest, v1.AccessSnapshotResponse](
+			httpClient,
+			baseURL+EntitlementServiceGetAccessSnapshotProcedure,
+			connect.WithSchema(entitlementServiceMethods.ByName("GetAccessSnapshot")),
+			connect.WithClientOptions(opts...),
+		),
+	}
+}
+
+// entitlementServiceClient implements EntitlementServiceClient.
+type entitlementServiceClient struct {
+	getAccessSnapshot *connect.Client[v1.GetAccessSnapshotRequest, v1.AccessSnapshotResponse]
+}
+
+// GetAccessSnapshot calls links.backend.v1.EntitlementService.GetAccessSnapshot.
+func (c *entitlementServiceClient) GetAccessSnapshot(ctx context.Context, req *connect.Request[v1.GetAccessSnapshotRequest]) (*connect.Response[v1.AccessSnapshotResponse], error) {
+	return c.getAccessSnapshot.CallUnary(ctx, req)
+}
+
+// EntitlementServiceHandler is an implementation of the links.backend.v1.EntitlementService
+// service.
+type EntitlementServiceHandler interface {
+	GetAccessSnapshot(context.Context, *connect.Request[v1.GetAccessSnapshotRequest]) (*connect.Response[v1.AccessSnapshotResponse], error)
+}
+
+// NewEntitlementServiceHandler builds an HTTP handler from the service implementation. It returns
+// the path on which to mount the handler and the handler itself.
+//
+// By default, handlers support the Connect, gRPC, and gRPC-Web protocols with the binary Protobuf
+// and JSON codecs. They also support gzip compression.
+func NewEntitlementServiceHandler(svc EntitlementServiceHandler, opts ...connect.HandlerOption) (string, http.Handler) {
+	entitlementServiceMethods := v1.File_proto_links_backend_v1_backend_proto.Services().ByName("EntitlementService").Methods()
+	entitlementServiceGetAccessSnapshotHandler := connect.NewUnaryHandler(
+		EntitlementServiceGetAccessSnapshotProcedure,
+		svc.GetAccessSnapshot,
+		connect.WithSchema(entitlementServiceMethods.ByName("GetAccessSnapshot")),
+		connect.WithHandlerOptions(opts...),
+	)
+	return "/links.backend.v1.EntitlementService/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case EntitlementServiceGetAccessSnapshotProcedure:
+			entitlementServiceGetAccessSnapshotHandler.ServeHTTP(w, r)
+		default:
+			http.NotFound(w, r)
+		}
+	})
+}
+
+// UnimplementedEntitlementServiceHandler returns CodeUnimplemented from all methods.
+type UnimplementedEntitlementServiceHandler struct{}
+
+func (UnimplementedEntitlementServiceHandler) GetAccessSnapshot(context.Context, *connect.Request[v1.GetAccessSnapshotRequest]) (*connect.Response[v1.AccessSnapshotResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.EntitlementService.GetAccessSnapshot is not implemented"))
+}
+
+// MembershipServiceClient is a client for the links.backend.v1.MembershipService service.
+type MembershipServiceClient interface {
+	ListTenantMembers(context.Context, *connect.Request[v1.ListTenantMembersRequest]) (*connect.Response[v1.ListTenantMembersResponse], error)
+	InviteTenantMember(context.Context, *connect.Request[v1.InviteTenantMemberRequest]) (*connect.Response[v1.InviteTenantMemberResponse], error)
+	AcceptTenantInvite(context.Context, *connect.Request[v1.AcceptTenantInviteRequest]) (*connect.Response[v1.AuthResponse], error)
+}
+
+// NewMembershipServiceClient constructs a client for the links.backend.v1.MembershipService
+// service. By default, it uses the Connect protocol with the binary Protobuf Codec, asks for
+// gzipped responses, and sends uncompressed requests. To use the gRPC or gRPC-Web protocols, supply
+// the connect.WithGRPC() or connect.WithGRPCWeb() options.
+//
+// The URL supplied here should be the base URL for the Connect or gRPC server (for example,
+// http://api.acme.com or https://acme.com/grpc).
+func NewMembershipServiceClient(httpClient connect.HTTPClient, baseURL string, opts ...connect.ClientOption) MembershipServiceClient {
+	baseURL = strings.TrimRight(baseURL, "/")
+	membershipServiceMethods := v1.File_proto_links_backend_v1_backend_proto.Services().ByName("MembershipService").Methods()
+	return &membershipServiceClient{
+		listTenantMembers: connect.NewClient[v1.ListTenantMembersRequest, v1.ListTenantMembersResponse](
+			httpClient,
+			baseURL+MembershipServiceListTenantMembersProcedure,
+			connect.WithSchema(membershipServiceMethods.ByName("ListTenantMembers")),
+			connect.WithClientOptions(opts...),
+		),
+		inviteTenantMember: connect.NewClient[v1.InviteTenantMemberRequest, v1.InviteTenantMemberResponse](
+			httpClient,
+			baseURL+MembershipServiceInviteTenantMemberProcedure,
+			connect.WithSchema(membershipServiceMethods.ByName("InviteTenantMember")),
+			connect.WithClientOptions(opts...),
+		),
+		acceptTenantInvite: connect.NewClient[v1.AcceptTenantInviteRequest, v1.AuthResponse](
+			httpClient,
+			baseURL+MembershipServiceAcceptTenantInviteProcedure,
+			connect.WithSchema(membershipServiceMethods.ByName("AcceptTenantInvite")),
+			connect.WithClientOptions(opts...),
+		),
+	}
+}
+
+// membershipServiceClient implements MembershipServiceClient.
+type membershipServiceClient struct {
+	listTenantMembers  *connect.Client[v1.ListTenantMembersRequest, v1.ListTenantMembersResponse]
+	inviteTenantMember *connect.Client[v1.InviteTenantMemberRequest, v1.InviteTenantMemberResponse]
+	acceptTenantInvite *connect.Client[v1.AcceptTenantInviteRequest, v1.AuthResponse]
+}
+
+// ListTenantMembers calls links.backend.v1.MembershipService.ListTenantMembers.
+func (c *membershipServiceClient) ListTenantMembers(ctx context.Context, req *connect.Request[v1.ListTenantMembersRequest]) (*connect.Response[v1.ListTenantMembersResponse], error) {
+	return c.listTenantMembers.CallUnary(ctx, req)
+}
+
+// InviteTenantMember calls links.backend.v1.MembershipService.InviteTenantMember.
+func (c *membershipServiceClient) InviteTenantMember(ctx context.Context, req *connect.Request[v1.InviteTenantMemberRequest]) (*connect.Response[v1.InviteTenantMemberResponse], error) {
+	return c.inviteTenantMember.CallUnary(ctx, req)
+}
+
+// AcceptTenantInvite calls links.backend.v1.MembershipService.AcceptTenantInvite.
+func (c *membershipServiceClient) AcceptTenantInvite(ctx context.Context, req *connect.Request[v1.AcceptTenantInviteRequest]) (*connect.Response[v1.AuthResponse], error) {
+	return c.acceptTenantInvite.CallUnary(ctx, req)
+}
+
+// MembershipServiceHandler is an implementation of the links.backend.v1.MembershipService service.
+type MembershipServiceHandler interface {
+	ListTenantMembers(context.Context, *connect.Request[v1.ListTenantMembersRequest]) (*connect.Response[v1.ListTenantMembersResponse], error)
+	InviteTenantMember(context.Context, *connect.Request[v1.InviteTenantMemberRequest]) (*connect.Response[v1.InviteTenantMemberResponse], error)
+	AcceptTenantInvite(context.Context, *connect.Request[v1.AcceptTenantInviteRequest]) (*connect.Response[v1.AuthResponse], error)
+}
+
+// NewMembershipServiceHandler builds an HTTP handler from the service implementation. It returns
+// the path on which to mount the handler and the handler itself.
+//
+// By default, handlers support the Connect, gRPC, and gRPC-Web protocols with the binary Protobuf
+// and JSON codecs. They also support gzip compression.
+func NewMembershipServiceHandler(svc MembershipServiceHandler, opts ...connect.HandlerOption) (string, http.Handler) {
+	membershipServiceMethods := v1.File_proto_links_backend_v1_backend_proto.Services().ByName("MembershipService").Methods()
+	membershipServiceListTenantMembersHandler := connect.NewUnaryHandler(
+		MembershipServiceListTenantMembersProcedure,
+		svc.ListTenantMembers,
+		connect.WithSchema(membershipServiceMethods.ByName("ListTenantMembers")),
+		connect.WithHandlerOptions(opts...),
+	)
+	membershipServiceInviteTenantMemberHandler := connect.NewUnaryHandler(
+		MembershipServiceInviteTenantMemberProcedure,
+		svc.InviteTenantMember,
+		connect.WithSchema(membershipServiceMethods.ByName("InviteTenantMember")),
+		connect.WithHandlerOptions(opts...),
+	)
+	membershipServiceAcceptTenantInviteHandler := connect.NewUnaryHandler(
+		MembershipServiceAcceptTenantInviteProcedure,
+		svc.AcceptTenantInvite,
+		connect.WithSchema(membershipServiceMethods.ByName("AcceptTenantInvite")),
+		connect.WithHandlerOptions(opts...),
+	)
+	return "/links.backend.v1.MembershipService/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case MembershipServiceListTenantMembersProcedure:
+			membershipServiceListTenantMembersHandler.ServeHTTP(w, r)
+		case MembershipServiceInviteTenantMemberProcedure:
+			membershipServiceInviteTenantMemberHandler.ServeHTTP(w, r)
+		case MembershipServiceAcceptTenantInviteProcedure:
+			membershipServiceAcceptTenantInviteHandler.ServeHTTP(w, r)
+		default:
+			http.NotFound(w, r)
+		}
+	})
+}
+
+// UnimplementedMembershipServiceHandler returns CodeUnimplemented from all methods.
+type UnimplementedMembershipServiceHandler struct{}
+
+func (UnimplementedMembershipServiceHandler) ListTenantMembers(context.Context, *connect.Request[v1.ListTenantMembersRequest]) (*connect.Response[v1.ListTenantMembersResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.MembershipService.ListTenantMembers is not implemented"))
+}
+
+func (UnimplementedMembershipServiceHandler) InviteTenantMember(context.Context, *connect.Request[v1.InviteTenantMemberRequest]) (*connect.Response[v1.InviteTenantMemberResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.MembershipService.InviteTenantMember is not implemented"))
+}
+
+func (UnimplementedMembershipServiceHandler) AcceptTenantInvite(context.Context, *connect.Request[v1.AcceptTenantInviteRequest]) (*connect.Response[v1.AuthResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.MembershipService.AcceptTenantInvite is not implemented"))
+}
+
+// LicensingServiceClient is a client for the links.backend.v1.LicensingService service.
+type LicensingServiceClient interface {
+	GetTenantLicenses(context.Context, *connect.Request[v1.GetTenantLicensesRequest]) (*connect.Response[v1.GetTenantLicensesResponse], error)
+	SetMyTenantProductSeats(context.Context, *connect.Request[v1.SetMyTenantProductSeatsRequest]) (*connect.Response[v1.SetMyTenantProductSeatsResponse], error)
+	ListLicenseEvents(context.Context, *connect.Request[v1.ListLicenseEventsRequest]) (*connect.Response[v1.ListLicenseEventsResponse], error)
+}
+
+// NewLicensingServiceClient constructs a client for the links.backend.v1.LicensingService service.
+// By default, it uses the Connect protocol with the binary Protobuf Codec, asks for gzipped
+// responses, and sends uncompressed requests. To use the gRPC or gRPC-Web protocols, supply the
+// connect.WithGRPC() or connect.WithGRPCWeb() options.
+//
+// The URL supplied here should be the base URL for the Connect or gRPC server (for example,
+// http://api.acme.com or https://acme.com/grpc).
+func NewLicensingServiceClient(httpClient connect.HTTPClient, baseURL string, opts ...connect.ClientOption) LicensingServiceClient {
+	baseURL = strings.TrimRight(baseURL, "/")
+	licensingServiceMethods := v1.File_proto_links_backend_v1_backend_proto.Services().ByName("LicensingService").Methods()
+	return &licensingServiceClient{
+		getTenantLicenses: connect.NewClient[v1.GetTenantLicensesRequest, v1.GetTenantLicensesResponse](
+			httpClient,
+			baseURL+LicensingServiceGetTenantLicensesProcedure,
+			connect.WithSchema(licensingServiceMethods.ByName("GetTenantLicenses")),
+			connect.WithClientOptions(opts...),
+		),
+		setMyTenantProductSeats: connect.NewClient[v1.SetMyTenantProductSeatsRequest, v1.SetMyTenantProductSeatsResponse](
+			httpClient,
+			baseURL+LicensingServiceSetMyTenantProductSeatsProcedure,
+			connect.WithSchema(licensingServiceMethods.ByName("SetMyTenantProductSeats")),
+			connect.WithClientOptions(opts...),
+		),
+		listLicenseEvents: connect.NewClient[v1.ListLicenseEventsRequest, v1.ListLicenseEventsResponse](
+			httpClient,
+			baseURL+LicensingServiceListLicenseEventsProcedure,
+			connect.WithSchema(licensingServiceMethods.ByName("ListLicenseEvents")),
+			connect.WithClientOptions(opts...),
+		),
+	}
+}
+
+// licensingServiceClient implements LicensingServiceClient.
+type licensingServiceClient struct {
+	getTenantLicenses       *connect.Client[v1.GetTenantLicensesRequest, v1.GetTenantLicensesResponse]
+	setMyTenantProductSeats *connect.Client[v1.SetMyTenantProductSeatsRequest, v1.SetMyTenantProductSeatsResponse]
+	listLicenseEvents       *connect.Client[v1.ListLicenseEventsRequest, v1.ListLicenseEventsResponse]
+}
+
+// GetTenantLicenses calls links.backend.v1.LicensingService.GetTenantLicenses.
+func (c *licensingServiceClient) GetTenantLicenses(ctx context.Context, req *connect.Request[v1.GetTenantLicensesRequest]) (*connect.Response[v1.GetTenantLicensesResponse], error) {
+	return c.getTenantLicenses.CallUnary(ctx, req)
+}
+
+// SetMyTenantProductSeats calls links.backend.v1.LicensingService.SetMyTenantProductSeats.
+func (c *licensingServiceClient) SetMyTenantProductSeats(ctx context.Context, req *connect.Request[v1.SetMyTenantProductSeatsRequest]) (*connect.Response[v1.SetMyTenantProductSeatsResponse], error) {
+	return c.setMyTenantProductSeats.CallUnary(ctx, req)
+}
+
+// ListLicenseEvents calls links.backend.v1.LicensingService.ListLicenseEvents.
+func (c *licensingServiceClient) ListLicenseEvents(ctx context.Context, req *connect.Request[v1.ListLicenseEventsRequest]) (*connect.Response[v1.ListLicenseEventsResponse], error) {
+	return c.listLicenseEvents.CallUnary(ctx, req)
+}
+
+// LicensingServiceHandler is an implementation of the links.backend.v1.LicensingService service.
+type LicensingServiceHandler interface {
+	GetTenantLicenses(context.Context, *connect.Request[v1.GetTenantLicensesRequest]) (*connect.Response[v1.GetTenantLicensesResponse], error)
+	SetMyTenantProductSeats(context.Context, *connect.Request[v1.SetMyTenantProductSeatsRequest]) (*connect.Response[v1.SetMyTenantProductSeatsResponse], error)
+	ListLicenseEvents(context.Context, *connect.Request[v1.ListLicenseEventsRequest]) (*connect.Response[v1.ListLicenseEventsResponse], error)
+}
+
+// NewLicensingServiceHandler builds an HTTP handler from the service implementation. It returns the
+// path on which to mount the handler and the handler itself.
+//
+// By default, handlers support the Connect, gRPC, and gRPC-Web protocols with the binary Protobuf
+// and JSON codecs. They also support gzip compression.
+func NewLicensingServiceHandler(svc LicensingServiceHandler, opts ...connect.HandlerOption) (string, http.Handler) {
+	licensingServiceMethods := v1.File_proto_links_backend_v1_backend_proto.Services().ByName("LicensingService").Methods()
+	licensingServiceGetTenantLicensesHandler := connect.NewUnaryHandler(
+		LicensingServiceGetTenantLicensesProcedure,
+		svc.GetTenantLicenses,
+		connect.WithSchema(licensingServiceMethods.ByName("GetTenantLicenses")),
+		connect.WithHandlerOptions(opts...),
+	)
+	licensingServiceSetMyTenantProductSeatsHandler := connect.NewUnaryHandler(
+		LicensingServiceSetMyTenantProductSeatsProcedure,
+		svc.SetMyTenantProductSeats,
+		connect.WithSchema(licensingServiceMethods.ByName("SetMyTenantProductSeats")),
+		connect.WithHandlerOptions(opts...),
+	)
+	licensingServiceListLicenseEventsHandler := connect.NewUnaryHandler(
+		LicensingServiceListLicenseEventsProcedure,
+		svc.ListLicenseEvents,
+		connect.WithSchema(licensingServiceMethods.ByName("ListLicenseEvents")),
+		connect.WithHandlerOptions(opts...),
+	)
+	return "/links.backend.v1.LicensingService/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case LicensingServiceGetTenantLicensesProcedure:
+			licensingServiceGetTenantLicensesHandler.ServeHTTP(w, r)
+		case LicensingServiceSetMyTenantProductSeatsProcedure:
+			licensingServiceSetMyTenantProductSeatsHandler.ServeHTTP(w, r)
+		case LicensingServiceListLicenseEventsProcedure:
+			licensingServiceListLicenseEventsHandler.ServeHTTP(w, r)
+		default:
+			http.NotFound(w, r)
+		}
+	})
+}
+
+// UnimplementedLicensingServiceHandler returns CodeUnimplemented from all methods.
+type UnimplementedLicensingServiceHandler struct{}
+
+func (UnimplementedLicensingServiceHandler) GetTenantLicenses(context.Context, *connect.Request[v1.GetTenantLicensesRequest]) (*connect.Response[v1.GetTenantLicensesResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.LicensingService.GetTenantLicenses is not implemented"))
+}
+
+func (UnimplementedLicensingServiceHandler) SetMyTenantProductSeats(context.Context, *connect.Request[v1.SetMyTenantProductSeatsRequest]) (*connect.Response[v1.SetMyTenantProductSeatsResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.LicensingService.SetMyTenantProductSeats is not implemented"))
+}
+
+func (UnimplementedLicensingServiceHandler) ListLicenseEvents(context.Context, *connect.Request[v1.ListLicenseEventsRequest]) (*connect.Response[v1.ListLicenseEventsResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.LicensingService.ListLicenseEvents is not implemented"))
+}
+
+// AssignmentServiceClient is a client for the links.backend.v1.AssignmentService service.
+type AssignmentServiceClient interface {
+	ListProductAssignments(context.Context, *connect.Request[v1.ListProductAssignmentsRequest]) (*connect.Response[v1.ListProductAssignmentsResponse], error)
+	AssignUserToProduct(context.Context, *connect.Request[v1.AssignUserToProductRequest]) (*connect.Response[v1.ProductAssignment], error)
+	RemoveUserFromProduct(context.Context, *connect.Request[v1.RemoveUserFromProductRequest]) (*connect.Response[v1.ProductAssignment], error)
+	UpdateProductRole(context.Context, *connect.Request[v1.UpdateProductRoleRequest]) (*connect.Response[v1.ProductAssignment], error)
+}
+
+// NewAssignmentServiceClient constructs a client for the links.backend.v1.AssignmentService
+// service. By default, it uses the Connect protocol with the binary Protobuf Codec, asks for
+// gzipped responses, and sends uncompressed requests. To use the gRPC or gRPC-Web protocols, supply
+// the connect.WithGRPC() or connect.WithGRPCWeb() options.
+//
+// The URL supplied here should be the base URL for the Connect or gRPC server (for example,
+// http://api.acme.com or https://acme.com/grpc).
+func NewAssignmentServiceClient(httpClient connect.HTTPClient, baseURL string, opts ...connect.ClientOption) AssignmentServiceClient {
+	baseURL = strings.TrimRight(baseURL, "/")
+	assignmentServiceMethods := v1.File_proto_links_backend_v1_backend_proto.Services().ByName("AssignmentService").Methods()
+	return &assignmentServiceClient{
+		listProductAssignments: connect.NewClient[v1.ListProductAssignmentsRequest, v1.ListProductAssignmentsResponse](
+			httpClient,
+			baseURL+AssignmentServiceListProductAssignmentsProcedure,
+			connect.WithSchema(assignmentServiceMethods.ByName("ListProductAssignments")),
+			connect.WithClientOptions(opts...),
+		),
+		assignUserToProduct: connect.NewClient[v1.AssignUserToProductRequest, v1.ProductAssignment](
+			httpClient,
+			baseURL+AssignmentServiceAssignUserToProductProcedure,
+			connect.WithSchema(assignmentServiceMethods.ByName("AssignUserToProduct")),
+			connect.WithClientOptions(opts...),
+		),
+		removeUserFromProduct: connect.NewClient[v1.RemoveUserFromProductRequest, v1.ProductAssignment](
+			httpClient,
+			baseURL+AssignmentServiceRemoveUserFromProductProcedure,
+			connect.WithSchema(assignmentServiceMethods.ByName("RemoveUserFromProduct")),
+			connect.WithClientOptions(opts...),
+		),
+		updateProductRole: connect.NewClient[v1.UpdateProductRoleRequest, v1.ProductAssignment](
+			httpClient,
+			baseURL+AssignmentServiceUpdateProductRoleProcedure,
+			connect.WithSchema(assignmentServiceMethods.ByName("UpdateProductRole")),
+			connect.WithClientOptions(opts...),
+		),
+	}
+}
+
+// assignmentServiceClient implements AssignmentServiceClient.
+type assignmentServiceClient struct {
+	listProductAssignments *connect.Client[v1.ListProductAssignmentsRequest, v1.ListProductAssignmentsResponse]
+	assignUserToProduct    *connect.Client[v1.AssignUserToProductRequest, v1.ProductAssignment]
+	removeUserFromProduct  *connect.Client[v1.RemoveUserFromProductRequest, v1.ProductAssignment]
+	updateProductRole      *connect.Client[v1.UpdateProductRoleRequest, v1.ProductAssignment]
+}
+
+// ListProductAssignments calls links.backend.v1.AssignmentService.ListProductAssignments.
+func (c *assignmentServiceClient) ListProductAssignments(ctx context.Context, req *connect.Request[v1.ListProductAssignmentsRequest]) (*connect.Response[v1.ListProductAssignmentsResponse], error) {
+	return c.listProductAssignments.CallUnary(ctx, req)
+}
+
+// AssignUserToProduct calls links.backend.v1.AssignmentService.AssignUserToProduct.
+func (c *assignmentServiceClient) AssignUserToProduct(ctx context.Context, req *connect.Request[v1.AssignUserToProductRequest]) (*connect.Response[v1.ProductAssignment], error) {
+	return c.assignUserToProduct.CallUnary(ctx, req)
+}
+
+// RemoveUserFromProduct calls links.backend.v1.AssignmentService.RemoveUserFromProduct.
+func (c *assignmentServiceClient) RemoveUserFromProduct(ctx context.Context, req *connect.Request[v1.RemoveUserFromProductRequest]) (*connect.Response[v1.ProductAssignment], error) {
+	return c.removeUserFromProduct.CallUnary(ctx, req)
+}
+
+// UpdateProductRole calls links.backend.v1.AssignmentService.UpdateProductRole.
+func (c *assignmentServiceClient) UpdateProductRole(ctx context.Context, req *connect.Request[v1.UpdateProductRoleRequest]) (*connect.Response[v1.ProductAssignment], error) {
+	return c.updateProductRole.CallUnary(ctx, req)
+}
+
+// AssignmentServiceHandler is an implementation of the links.backend.v1.AssignmentService service.
+type AssignmentServiceHandler interface {
+	ListProductAssignments(context.Context, *connect.Request[v1.ListProductAssignmentsRequest]) (*connect.Response[v1.ListProductAssignmentsResponse], error)
+	AssignUserToProduct(context.Context, *connect.Request[v1.AssignUserToProductRequest]) (*connect.Response[v1.ProductAssignment], error)
+	RemoveUserFromProduct(context.Context, *connect.Request[v1.RemoveUserFromProductRequest]) (*connect.Response[v1.ProductAssignment], error)
+	UpdateProductRole(context.Context, *connect.Request[v1.UpdateProductRoleRequest]) (*connect.Response[v1.ProductAssignment], error)
+}
+
+// NewAssignmentServiceHandler builds an HTTP handler from the service implementation. It returns
+// the path on which to mount the handler and the handler itself.
+//
+// By default, handlers support the Connect, gRPC, and gRPC-Web protocols with the binary Protobuf
+// and JSON codecs. They also support gzip compression.
+func NewAssignmentServiceHandler(svc AssignmentServiceHandler, opts ...connect.HandlerOption) (string, http.Handler) {
+	assignmentServiceMethods := v1.File_proto_links_backend_v1_backend_proto.Services().ByName("AssignmentService").Methods()
+	assignmentServiceListProductAssignmentsHandler := connect.NewUnaryHandler(
+		AssignmentServiceListProductAssignmentsProcedure,
+		svc.ListProductAssignments,
+		connect.WithSchema(assignmentServiceMethods.ByName("ListProductAssignments")),
+		connect.WithHandlerOptions(opts...),
+	)
+	assignmentServiceAssignUserToProductHandler := connect.NewUnaryHandler(
+		AssignmentServiceAssignUserToProductProcedure,
+		svc.AssignUserToProduct,
+		connect.WithSchema(assignmentServiceMethods.ByName("AssignUserToProduct")),
+		connect.WithHandlerOptions(opts...),
+	)
+	assignmentServiceRemoveUserFromProductHandler := connect.NewUnaryHandler(
+		AssignmentServiceRemoveUserFromProductProcedure,
+		svc.RemoveUserFromProduct,
+		connect.WithSchema(assignmentServiceMethods.ByName("RemoveUserFromProduct")),
+		connect.WithHandlerOptions(opts...),
+	)
+	assignmentServiceUpdateProductRoleHandler := connect.NewUnaryHandler(
+		AssignmentServiceUpdateProductRoleProcedure,
+		svc.UpdateProductRole,
+		connect.WithSchema(assignmentServiceMethods.ByName("UpdateProductRole")),
+		connect.WithHandlerOptions(opts...),
+	)
+	return "/links.backend.v1.AssignmentService/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case AssignmentServiceListProductAssignmentsProcedure:
+			assignmentServiceListProductAssignmentsHandler.ServeHTTP(w, r)
+		case AssignmentServiceAssignUserToProductProcedure:
+			assignmentServiceAssignUserToProductHandler.ServeHTTP(w, r)
+		case AssignmentServiceRemoveUserFromProductProcedure:
+			assignmentServiceRemoveUserFromProductHandler.ServeHTTP(w, r)
+		case AssignmentServiceUpdateProductRoleProcedure:
+			assignmentServiceUpdateProductRoleHandler.ServeHTTP(w, r)
+		default:
+			http.NotFound(w, r)
+		}
+	})
+}
+
+// UnimplementedAssignmentServiceHandler returns CodeUnimplemented from all methods.
+type UnimplementedAssignmentServiceHandler struct{}
+
+func (UnimplementedAssignmentServiceHandler) ListProductAssignments(context.Context, *connect.Request[v1.ListProductAssignmentsRequest]) (*connect.Response[v1.ListProductAssignmentsResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.AssignmentService.ListProductAssignments is not implemented"))
+}
+
+func (UnimplementedAssignmentServiceHandler) AssignUserToProduct(context.Context, *connect.Request[v1.AssignUserToProductRequest]) (*connect.Response[v1.ProductAssignment], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.AssignmentService.AssignUserToProduct is not implemented"))
+}
+
+func (UnimplementedAssignmentServiceHandler) RemoveUserFromProduct(context.Context, *connect.Request[v1.RemoveUserFromProductRequest]) (*connect.Response[v1.ProductAssignment], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.AssignmentService.RemoveUserFromProduct is not implemented"))
+}
+
+func (UnimplementedAssignmentServiceHandler) UpdateProductRole(context.Context, *connect.Request[v1.UpdateProductRoleRequest]) (*connect.Response[v1.ProductAssignment], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.AssignmentService.UpdateProductRole is not implemented"))
+}
+
+// DemoServiceClient is a client for the links.backend.v1.DemoService service.
+type DemoServiceClient interface {
+	GetPlannerDemo(context.Context, *connect.Request[v1.GetPlannerDemoRequest]) (*connect.Response[v1.DemoFeatureResponse], error)
+	GetFinanceDemo(context.Context, *connect.Request[v1.GetFinanceDemoRequest]) (*connect.Response[v1.DemoFeatureResponse], error)
+}
+
+// NewDemoServiceClient constructs a client for the links.backend.v1.DemoService service. By
+// default, it uses the Connect protocol with the binary Protobuf Codec, asks for gzipped responses,
+// and sends uncompressed requests. To use the gRPC or gRPC-Web protocols, supply the
+// connect.WithGRPC() or connect.WithGRPCWeb() options.
+//
+// The URL supplied here should be the base URL for the Connect or gRPC server (for example,
+// http://api.acme.com or https://acme.com/grpc).
+func NewDemoServiceClient(httpClient connect.HTTPClient, baseURL string, opts ...connect.ClientOption) DemoServiceClient {
+	baseURL = strings.TrimRight(baseURL, "/")
+	demoServiceMethods := v1.File_proto_links_backend_v1_backend_proto.Services().ByName("DemoService").Methods()
+	return &demoServiceClient{
+		getPlannerDemo: connect.NewClient[v1.GetPlannerDemoRequest, v1.DemoFeatureResponse](
+			httpClient,
+			baseURL+DemoServiceGetPlannerDemoProcedure,
+			connect.WithSchema(demoServiceMethods.ByName("GetPlannerDemo")),
+			connect.WithClientOptions(opts...),
+		),
+		getFinanceDemo: connect.NewClient[v1.GetFinanceDemoRequest, v1.DemoFeatureResponse](
+			httpClient,
+			baseURL+DemoServiceGetFinanceDemoProcedure,
+			connect.WithSchema(demoServiceMethods.ByName("GetFinanceDemo")),
+			connect.WithClientOptions(opts...),
+		),
+	}
+}
+
+// demoServiceClient implements DemoServiceClient.
+type demoServiceClient struct {
+	getPlannerDemo *connect.Client[v1.GetPlannerDemoRequest, v1.DemoFeatureResponse]
+	getFinanceDemo *connect.Client[v1.GetFinanceDemoRequest, v1.DemoFeatureResponse]
+}
+
+// GetPlannerDemo calls links.backend.v1.DemoService.GetPlannerDemo.
+func (c *demoServiceClient) GetPlannerDemo(ctx context.Context, req *connect.Request[v1.GetPlannerDemoRequest]) (*connect.Response[v1.DemoFeatureResponse], error) {
+	return c.getPlannerDemo.CallUnary(ctx, req)
+}
+
+// GetFinanceDemo calls links.backend.v1.DemoService.GetFinanceDemo.
+func (c *demoServiceClient) GetFinanceDemo(ctx context.Context, req *connect.Request[v1.GetFinanceDemoRequest]) (*connect.Response[v1.DemoFeatureResponse], error) {
+	return c.getFinanceDemo.CallUnary(ctx, req)
+}
+
+// DemoServiceHandler is an implementation of the links.backend.v1.DemoService service.
+type DemoServiceHandler interface {
+	GetPlannerDemo(context.Context, *connect.Request[v1.GetPlannerDemoRequest]) (*connect.Response[v1.DemoFeatureResponse], error)
+	GetFinanceDemo(context.Context, *connect.Request[v1.GetFinanceDemoRequest]) (*connect.Response[v1.DemoFeatureResponse], error)
+}
+
+// NewDemoServiceHandler builds an HTTP handler from the service implementation. It returns the path
+// on which to mount the handler and the handler itself.
+//
+// By default, handlers support the Connect, gRPC, and gRPC-Web protocols with the binary Protobuf
+// and JSON codecs. They also support gzip compression.
+func NewDemoServiceHandler(svc DemoServiceHandler, opts ...connect.HandlerOption) (string, http.Handler) {
+	demoServiceMethods := v1.File_proto_links_backend_v1_backend_proto.Services().ByName("DemoService").Methods()
+	demoServiceGetPlannerDemoHandler := connect.NewUnaryHandler(
+		DemoServiceGetPlannerDemoProcedure,
+		svc.GetPlannerDemo,
+		connect.WithSchema(demoServiceMethods.ByName("GetPlannerDemo")),
+		connect.WithHandlerOptions(opts...),
+	)
+	demoServiceGetFinanceDemoHandler := connect.NewUnaryHandler(
+		DemoServiceGetFinanceDemoProcedure,
+		svc.GetFinanceDemo,
+		connect.WithSchema(demoServiceMethods.ByName("GetFinanceDemo")),
+		connect.WithHandlerOptions(opts...),
+	)
+	return "/links.backend.v1.DemoService/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case DemoServiceGetPlannerDemoProcedure:
+			demoServiceGetPlannerDemoHandler.ServeHTTP(w, r)
+		case DemoServiceGetFinanceDemoProcedure:
+			demoServiceGetFinanceDemoHandler.ServeHTTP(w, r)
+		default:
+			http.NotFound(w, r)
+		}
+	})
+}
+
+// UnimplementedDemoServiceHandler returns CodeUnimplemented from all methods.
+type UnimplementedDemoServiceHandler struct{}
+
+func (UnimplementedDemoServiceHandler) GetPlannerDemo(context.Context, *connect.Request[v1.GetPlannerDemoRequest]) (*connect.Response[v1.DemoFeatureResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.DemoService.GetPlannerDemo is not implemented"))
+}
+
+func (UnimplementedDemoServiceHandler) GetFinanceDemo(context.Context, *connect.Request[v1.GetFinanceDemoRequest]) (*connect.Response[v1.DemoFeatureResponse], error) {
+	return nil, connect.NewError(connect.CodeUnimplemented, errors.New("links.backend.v1.DemoService.GetFinanceDemo is not implemented"))
 }

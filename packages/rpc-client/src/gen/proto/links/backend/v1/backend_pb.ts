@@ -10,7 +10,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file proto/links/backend/v1/backend.proto.
  */
 export const file_proto_links_backend_v1_backend: GenFile = /*@__PURE__*/
-  fileDesc("CiRwcm90by9saW5rcy9iYWNrZW5kL3YxL2JhY2tlbmQucHJvdG8SEGxpbmtzLmJhY2tlbmQudjEiEgoQR2V0SGVhbHRoUmVxdWVzdCIvChFHZXRIZWFsdGhSZXNwb25zZRIOCgZzdGF0dXMYASABKAkSCgoCZGIYAiABKAkyZgoOQmFja2VuZFNlcnZpY2USVAoJR2V0SGVhbHRoEiIubGlua3MuYmFja2VuZC52MS5HZXRIZWFsdGhSZXF1ZXN0GiMubGlua3MuYmFja2VuZC52MS5HZXRIZWFsdGhSZXNwb25zZUJIWkZnaXRodWIuY29tL2xpbmtzL2JhY2tlbmQvaW50ZXJuYWwvZ2VuL3Byb3RvL2xpbmtzL2JhY2tlbmQvdjE7YmFja2VuZHYxYgZwcm90bzM");
+  fileDesc("CiRwcm90by9saW5rcy9iYWNrZW5kL3YxL2JhY2tlbmQucHJvdG8SEGxpbmtzLmJhY2tlbmQudjEiEgoQR2V0SGVhbHRoUmVxdWVzdCIvChFHZXRIZWFsdGhSZXNwb25zZRIOCgZzdGF0dXMYASABKAkSCgoCZGIYAiABKAkiXQoPUmVnaXN0ZXJSZXF1ZXN0Eg0KBWVtYWlsGAEgASgJEhAKCHBhc3N3b3JkGAIgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRITCgt0ZW5hbnRfbmFtZRgEIAEoCSIvCgxMb2dpblJlcXVlc3QSDQoFZW1haWwYASABKAkSEAoIcGFzc3dvcmQYAiABKAkibAoMQXV0aFJlc3BvbnNlEioKB3Nlc3Npb24YASABKAsyGS5saW5rcy5iYWNrZW5kLnYxLlNlc3Npb24SMAoGYWNjZXNzGAIgASgLMiAubGlua3MuYmFja2VuZC52MS5BY2Nlc3NTbmFwc2hvdCIPCg1Mb2dvdXRSZXF1ZXN0IhwKDkxvZ291dFJlc3BvbnNlEgoKAm9rGAEgASgIIhMKEUdldFNlc3Npb25SZXF1ZXN0IokBChJHZXRTZXNzaW9uUmVzcG9uc2USFQoNYXV0aGVudGljYXRlZBgBIAEoCBIqCgdzZXNzaW9uGAIgASgLMhkubGlua3MuYmFja2VuZC52MS5TZXNzaW9uEjAKBmFjY2VzcxgDIAEoCzIgLmxpbmtzLmJhY2tlbmQudjEuQWNjZXNzU25hcHNob3QiFgoUTGlzdE15VGVuYW50c1JlcXVlc3QiSQoVTGlzdE15VGVuYW50c1Jlc3BvbnNlEjAKB3RlbmFudHMYASADKAsyHy5saW5rcy5iYWNrZW5kLnYxLlRlbmFudFN1bW1hcnkiKAoTU3dpdGNoVGVuYW50UmVxdWVzdBIRCgl0ZW5hbnRfaWQYASABKAkiGgoYR2V0QWNjZXNzU25hcHNob3RSZXF1ZXN0IkoKFkFjY2Vzc1NuYXBzaG90UmVzcG9uc2USMAoGYWNjZXNzGAEgASgLMiAubGlua3MuYmFja2VuZC52MS5BY2Nlc3NTbmFwc2hvdCIaChhMaXN0VGVuYW50TWVtYmVyc1JlcXVlc3QiTAoZTGlzdFRlbmFudE1lbWJlcnNSZXNwb25zZRIvCgdtZW1iZXJzGAEgAygLMh4ubGlua3MuYmFja2VuZC52MS5UZW5hbnRNZW1iZXIiVQoZSW52aXRlVGVuYW50TWVtYmVyUmVxdWVzdBINCgVlbWFpbBgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkSEwoLdGVuYW50X3JvbGUYAyABKAkiYgoaSW52aXRlVGVuYW50TWVtYmVyUmVzcG9uc2USLgoGbWVtYmVyGAEgASgLMh4ubGlua3MuYmFja2VuZC52MS5UZW5hbnRNZW1iZXISFAoMaW52aXRlX3Rva2VuGAIgASgJIlkKGUFjY2VwdFRlbmFudEludml0ZVJlcXVlc3QSFAoMaW52aXRlX3Rva2VuGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIQCghwYXNzd29yZBgDIAEoCSIaChhHZXRUZW5hbnRMaWNlbnNlc1JlcXVlc3QiTwoZR2V0VGVuYW50TGljZW5zZXNSZXNwb25zZRIyCghsaWNlbnNlcxgBIAMoCzIgLmxpbmtzLmJhY2tlbmQudjEuUHJvZHVjdExpY2Vuc2UiSgoeU2V0TXlUZW5hbnRQcm9kdWN0U2VhdHNSZXF1ZXN0EhMKC3Byb2R1Y3Rfa2V5GAEgASgJEhMKC3NlYXRzX3RvdGFsGAIgASgFIlQKH1NldE15VGVuYW50UHJvZHVjdFNlYXRzUmVzcG9uc2USMQoHbGljZW5zZRgBIAEoCzIgLmxpbmtzLmJhY2tlbmQudjEuUHJvZHVjdExpY2Vuc2UiGgoYTGlzdExpY2Vuc2VFdmVudHNSZXF1ZXN0IksKGUxpc3RMaWNlbnNlRXZlbnRzUmVzcG9uc2USLgoGZXZlbnRzGAEgAygLMh4ubGlua3MuYmFja2VuZC52MS5MaWNlbnNlRXZlbnQiNAodTGlzdFByb2R1Y3RBc3NpZ25tZW50c1JlcXVlc3QSEwoLcHJvZHVjdF9rZXkYASABKAkiWgoeTGlzdFByb2R1Y3RBc3NpZ25tZW50c1Jlc3BvbnNlEjgKC2Fzc2lnbm1lbnRzGAEgAygLMiMubGlua3MuYmFja2VuZC52MS5Qcm9kdWN0QXNzaWdubWVudCJQChpBc3NpZ25Vc2VyVG9Qcm9kdWN0UmVxdWVzdBIPCgd1c2VyX2lkGAEgASgJEhMKC3Byb2R1Y3Rfa2V5GAIgASgJEgwKBHJvbGUYAyABKAkiRAocUmVtb3ZlVXNlckZyb21Qcm9kdWN0UmVxdWVzdBIPCgd1c2VyX2lkGAEgASgJEhMKC3Byb2R1Y3Rfa2V5GAIgASgJIk4KGFVwZGF0ZVByb2R1Y3RSb2xlUmVxdWVzdBIPCgd1c2VyX2lkGAEgASgJEhMKC3Byb2R1Y3Rfa2V5GAIgASgJEgwKBHJvbGUYAyABKAkiFwoVR2V0UGxhbm5lckRlbW9SZXF1ZXN0IhcKFUdldEZpbmFuY2VEZW1vUmVxdWVzdCJKChNEZW1vRmVhdHVyZVJlc3BvbnNlEhMKC3Byb2R1Y3Rfa2V5GAEgASgJEg0KBXRpdGxlGAIgASgJEg8KB21lc3NhZ2UYAyABKAkiVAoHU2Vzc2lvbhIKCgJpZBgBIAEoCRIPCgd1c2VyX2lkGAIgASgJEhgKEGFjdGl2ZV90ZW5hbnRfaWQYAyABKAkSEgoKZXhwaXJlc19hdBgEIAEoCSLYAQoOQWNjZXNzU25hcHNob3QSKgoEdXNlchgBIAEoCzIcLmxpbmtzLmJhY2tlbmQudjEuQWNjZXNzVXNlchI1Cg1hY3RpdmVfdGVuYW50GAIgASgLMh4ubGlua3MuYmFja2VuZC52MS5BY3RpdmVUZW5hbnQSMAoHdGVuYW50cxgDIAMoCzIfLmxpbmtzLmJhY2tlbmQudjEuVGVuYW50U3VtbWFyeRIxCghwcm9kdWN0cxgEIAMoCzIfLmxpbmtzLmJhY2tlbmQudjEuUHJvZHVjdEFjY2VzcyJUCgpBY2Nlc3NVc2VyEgoKAmlkGAEgASgJEg0KBWVtYWlsGAIgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRIVCg1wbGF0Zm9ybV9yb2xlGAQgASgJIkQKDEFjdGl2ZVRlbmFudBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEgwKBHNsdWcYAyABKAkSDAoEcm9sZRgEIAEoCSJVCg1UZW5hbnRTdW1tYXJ5EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDAoEc2x1ZxgDIAEoCRIMCgRyb2xlGAQgASgJEg4KBnN0YXR1cxgFIAEoCSKYAQoNUHJvZHVjdEFjY2VzcxILCgNrZXkYASABKAkSDAoEbmFtZRgCIAEoCRIOCgZzdGF0dXMYAyABKAkSEAoIYXNzaWduZWQYBCABKAgSDAoEcm9sZRgFIAEoCRITCgtwZXJtaXNzaW9ucxgGIAMoCRITCgtzZWF0c190b3RhbBgHIAEoBRISCgpzZWF0c191c2VkGAggASgFImkKDFRlbmFudE1lbWJlchIPCgd1c2VyX2lkGAEgASgJEg0KBWVtYWlsGAIgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRITCgt0ZW5hbnRfcm9sZRgEIAEoCRIOCgZzdGF0dXMYBSABKAkipAEKDlByb2R1Y3RMaWNlbnNlEgoKAmlkGAEgASgJEhMKC3Byb2R1Y3Rfa2V5GAIgASgJEhQKDHByb2R1Y3RfbmFtZRgDIAEoCRITCgtzZWF0c190b3RhbBgEIAEoBRISCgpzZWF0c191c2VkGAUgASgFEg4KBnN0YXR1cxgGIAEoCRIOCgZzb3VyY2UYByABKAkSEgoKdXBkYXRlZF9hdBgIIAEoCSLGAQoRUHJvZHVjdEFzc2lnbm1lbnQSCgoCaWQYASABKAkSEQoJdGVuYW50X2lkGAIgASgJEg8KB3VzZXJfaWQYAyABKAkSDQoFZW1haWwYBCABKAkSFAoMZGlzcGxheV9uYW1lGAUgASgJEhMKC3Byb2R1Y3Rfa2V5GAYgASgJEhQKDHByb2R1Y3RfbmFtZRgHIAEoCRIMCgRyb2xlGAggASgJEg4KBnN0YXR1cxgJIAEoCRITCgthc3NpZ25lZF9hdBgKIAEoCSKjAQoMTGljZW5zZUV2ZW50EgoKAmlkGAEgASgJEhMKC3Byb2R1Y3Rfa2V5GAIgASgJEgwKBHR5cGUYAyABKAkSFAoMc2VhdHNfYmVmb3JlGAQgASgFEhMKC3NlYXRzX2FmdGVyGAUgASgFEg4KBnNvdXJjZRgGIAEoCRIVCg1hY3Rvcl91c2VyX2lkGAcgASgJEhIKCmNyZWF0ZWRfYXQYCCABKAkyZgoOQmFja2VuZFNlcnZpY2USVAoJR2V0SGVhbHRoEiIubGlua3MuYmFja2VuZC52MS5HZXRIZWFsdGhSZXF1ZXN0GiMubGlua3MuYmFja2VuZC52MS5HZXRIZWFsdGhSZXNwb25zZTLLAgoLQXV0aFNlcnZpY2USTQoIUmVnaXN0ZXISIS5saW5rcy5iYWNrZW5kLnYxLlJlZ2lzdGVyUmVxdWVzdBoeLmxpbmtzLmJhY2tlbmQudjEuQXV0aFJlc3BvbnNlEkcKBUxvZ2luEh4ubGlua3MuYmFja2VuZC52MS5Mb2dpblJlcXVlc3QaHi5saW5rcy5iYWNrZW5kLnYxLkF1dGhSZXNwb25zZRJLCgZMb2dvdXQSHy5saW5rcy5iYWNrZW5kLnYxLkxvZ291dFJlcXVlc3QaIC5saW5rcy5iYWNrZW5kLnYxLkxvZ291dFJlc3BvbnNlElcKCkdldFNlc3Npb24SIy5saW5rcy5iYWNrZW5kLnYxLkdldFNlc3Npb25SZXF1ZXN0GiQubGlua3MuYmFja2VuZC52MS5HZXRTZXNzaW9uUmVzcG9uc2Uy0gEKDVRlbmFudFNlcnZpY2USYAoNTGlzdE15VGVuYW50cxImLmxpbmtzLmJhY2tlbmQudjEuTGlzdE15VGVuYW50c1JlcXVlc3QaJy5saW5rcy5iYWNrZW5kLnYxLkxpc3RNeVRlbmFudHNSZXNwb25zZRJfCgxTd2l0Y2hUZW5hbnQSJS5saW5rcy5iYWNrZW5kLnYxLlN3aXRjaFRlbmFudFJlcXVlc3QaKC5saW5rcy5iYWNrZW5kLnYxLkFjY2Vzc1NuYXBzaG90UmVzcG9uc2UyfwoSRW50aXRsZW1lbnRTZXJ2aWNlEmkKEUdldEFjY2Vzc1NuYXBzaG90EioubGlua3MuYmFja2VuZC52MS5HZXRBY2Nlc3NTbmFwc2hvdFJlcXVlc3QaKC5saW5rcy5iYWNrZW5kLnYxLkFjY2Vzc1NuYXBzaG90UmVzcG9uc2Uy1QIKEU1lbWJlcnNoaXBTZXJ2aWNlEmwKEUxpc3RUZW5hbnRNZW1iZXJzEioubGlua3MuYmFja2VuZC52MS5MaXN0VGVuYW50TWVtYmVyc1JlcXVlc3QaKy5saW5rcy5iYWNrZW5kLnYxLkxpc3RUZW5hbnRNZW1iZXJzUmVzcG9uc2USbwoSSW52aXRlVGVuYW50TWVtYmVyEisubGlua3MuYmFja2VuZC52MS5JbnZpdGVUZW5hbnRNZW1iZXJSZXF1ZXN0GiwubGlua3MuYmFja2VuZC52MS5JbnZpdGVUZW5hbnRNZW1iZXJSZXNwb25zZRJhChJBY2NlcHRUZW5hbnRJbnZpdGUSKy5saW5rcy5iYWNrZW5kLnYxLkFjY2VwdFRlbmFudEludml0ZVJlcXVlc3QaHi5saW5rcy5iYWNrZW5kLnYxLkF1dGhSZXNwb25zZTLuAgoQTGljZW5zaW5nU2VydmljZRJsChFHZXRUZW5hbnRMaWNlbnNlcxIqLmxpbmtzLmJhY2tlbmQudjEuR2V0VGVuYW50TGljZW5zZXNSZXF1ZXN0GisubGlua3MuYmFja2VuZC52MS5HZXRUZW5hbnRMaWNlbnNlc1Jlc3BvbnNlEn4KF1NldE15VGVuYW50UHJvZHVjdFNlYXRzEjAubGlua3MuYmFja2VuZC52MS5TZXRNeVRlbmFudFByb2R1Y3RTZWF0c1JlcXVlc3QaMS5saW5rcy5iYWNrZW5kLnYxLlNldE15VGVuYW50UHJvZHVjdFNlYXRzUmVzcG9uc2USbAoRTGlzdExpY2Vuc2VFdmVudHMSKi5saW5rcy5iYWNrZW5kLnYxLkxpc3RMaWNlbnNlRXZlbnRzUmVxdWVzdBorLmxpbmtzLmJhY2tlbmQudjEuTGlzdExpY2Vuc2VFdmVudHNSZXNwb25zZTLOAwoRQXNzaWdubWVudFNlcnZpY2USewoWTGlzdFByb2R1Y3RBc3NpZ25tZW50cxIvLmxpbmtzLmJhY2tlbmQudjEuTGlzdFByb2R1Y3RBc3NpZ25tZW50c1JlcXVlc3QaMC5saW5rcy5iYWNrZW5kLnYxLkxpc3RQcm9kdWN0QXNzaWdubWVudHNSZXNwb25zZRJoChNBc3NpZ25Vc2VyVG9Qcm9kdWN0EiwubGlua3MuYmFja2VuZC52MS5Bc3NpZ25Vc2VyVG9Qcm9kdWN0UmVxdWVzdBojLmxpbmtzLmJhY2tlbmQudjEuUHJvZHVjdEFzc2lnbm1lbnQSbAoVUmVtb3ZlVXNlckZyb21Qcm9kdWN0Ei4ubGlua3MuYmFja2VuZC52MS5SZW1vdmVVc2VyRnJvbVByb2R1Y3RSZXF1ZXN0GiMubGlua3MuYmFja2VuZC52MS5Qcm9kdWN0QXNzaWdubWVudBJkChFVcGRhdGVQcm9kdWN0Um9sZRIqLmxpbmtzLmJhY2tlbmQudjEuVXBkYXRlUHJvZHVjdFJvbGVSZXF1ZXN0GiMubGlua3MuYmFja2VuZC52MS5Qcm9kdWN0QXNzaWdubWVudDLRAQoLRGVtb1NlcnZpY2USYAoOR2V0UGxhbm5lckRlbW8SJy5saW5rcy5iYWNrZW5kLnYxLkdldFBsYW5uZXJEZW1vUmVxdWVzdBolLmxpbmtzLmJhY2tlbmQudjEuRGVtb0ZlYXR1cmVSZXNwb25zZRJgCg5HZXRGaW5hbmNlRGVtbxInLmxpbmtzLmJhY2tlbmQudjEuR2V0RmluYW5jZURlbW9SZXF1ZXN0GiUubGlua3MuYmFja2VuZC52MS5EZW1vRmVhdHVyZVJlc3BvbnNlQkhaRmdpdGh1Yi5jb20vbGlua3MvYmFja2VuZC9pbnRlcm5hbC9nZW4vcHJvdG8vbGlua3MvYmFja2VuZC92MTtiYWNrZW5kdjFiBnByb3RvMw");
 
 /**
  * @generated from message links.backend.v1.GetHealthRequest
@@ -48,6 +48,1017 @@ export const GetHealthResponseSchema: GenMessage<GetHealthResponse> = /*@__PURE_
   messageDesc(file_proto_links_backend_v1_backend, 1);
 
 /**
+ * @generated from message links.backend.v1.RegisterRequest
+ */
+export type RegisterRequest = Message<"links.backend.v1.RegisterRequest"> & {
+  /**
+   * @generated from field: string email = 1;
+   */
+  email: string;
+
+  /**
+   * @generated from field: string password = 2;
+   */
+  password: string;
+
+  /**
+   * @generated from field: string display_name = 3;
+   */
+  displayName: string;
+
+  /**
+   * @generated from field: string tenant_name = 4;
+   */
+  tenantName: string;
+};
+
+/**
+ * Describes the message links.backend.v1.RegisterRequest.
+ * Use `create(RegisterRequestSchema)` to create a new message.
+ */
+export const RegisterRequestSchema: GenMessage<RegisterRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 2);
+
+/**
+ * @generated from message links.backend.v1.LoginRequest
+ */
+export type LoginRequest = Message<"links.backend.v1.LoginRequest"> & {
+  /**
+   * @generated from field: string email = 1;
+   */
+  email: string;
+
+  /**
+   * @generated from field: string password = 2;
+   */
+  password: string;
+};
+
+/**
+ * Describes the message links.backend.v1.LoginRequest.
+ * Use `create(LoginRequestSchema)` to create a new message.
+ */
+export const LoginRequestSchema: GenMessage<LoginRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 3);
+
+/**
+ * @generated from message links.backend.v1.AuthResponse
+ */
+export type AuthResponse = Message<"links.backend.v1.AuthResponse"> & {
+  /**
+   * @generated from field: links.backend.v1.Session session = 1;
+   */
+  session?: Session | undefined;
+
+  /**
+   * @generated from field: links.backend.v1.AccessSnapshot access = 2;
+   */
+  access?: AccessSnapshot | undefined;
+};
+
+/**
+ * Describes the message links.backend.v1.AuthResponse.
+ * Use `create(AuthResponseSchema)` to create a new message.
+ */
+export const AuthResponseSchema: GenMessage<AuthResponse> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 4);
+
+/**
+ * @generated from message links.backend.v1.LogoutRequest
+ */
+export type LogoutRequest = Message<"links.backend.v1.LogoutRequest"> & {
+};
+
+/**
+ * Describes the message links.backend.v1.LogoutRequest.
+ * Use `create(LogoutRequestSchema)` to create a new message.
+ */
+export const LogoutRequestSchema: GenMessage<LogoutRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 5);
+
+/**
+ * @generated from message links.backend.v1.LogoutResponse
+ */
+export type LogoutResponse = Message<"links.backend.v1.LogoutResponse"> & {
+  /**
+   * @generated from field: bool ok = 1;
+   */
+  ok: boolean;
+};
+
+/**
+ * Describes the message links.backend.v1.LogoutResponse.
+ * Use `create(LogoutResponseSchema)` to create a new message.
+ */
+export const LogoutResponseSchema: GenMessage<LogoutResponse> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 6);
+
+/**
+ * @generated from message links.backend.v1.GetSessionRequest
+ */
+export type GetSessionRequest = Message<"links.backend.v1.GetSessionRequest"> & {
+};
+
+/**
+ * Describes the message links.backend.v1.GetSessionRequest.
+ * Use `create(GetSessionRequestSchema)` to create a new message.
+ */
+export const GetSessionRequestSchema: GenMessage<GetSessionRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 7);
+
+/**
+ * @generated from message links.backend.v1.GetSessionResponse
+ */
+export type GetSessionResponse = Message<"links.backend.v1.GetSessionResponse"> & {
+  /**
+   * @generated from field: bool authenticated = 1;
+   */
+  authenticated: boolean;
+
+  /**
+   * @generated from field: links.backend.v1.Session session = 2;
+   */
+  session?: Session | undefined;
+
+  /**
+   * @generated from field: links.backend.v1.AccessSnapshot access = 3;
+   */
+  access?: AccessSnapshot | undefined;
+};
+
+/**
+ * Describes the message links.backend.v1.GetSessionResponse.
+ * Use `create(GetSessionResponseSchema)` to create a new message.
+ */
+export const GetSessionResponseSchema: GenMessage<GetSessionResponse> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 8);
+
+/**
+ * @generated from message links.backend.v1.ListMyTenantsRequest
+ */
+export type ListMyTenantsRequest = Message<"links.backend.v1.ListMyTenantsRequest"> & {
+};
+
+/**
+ * Describes the message links.backend.v1.ListMyTenantsRequest.
+ * Use `create(ListMyTenantsRequestSchema)` to create a new message.
+ */
+export const ListMyTenantsRequestSchema: GenMessage<ListMyTenantsRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 9);
+
+/**
+ * @generated from message links.backend.v1.ListMyTenantsResponse
+ */
+export type ListMyTenantsResponse = Message<"links.backend.v1.ListMyTenantsResponse"> & {
+  /**
+   * @generated from field: repeated links.backend.v1.TenantSummary tenants = 1;
+   */
+  tenants: TenantSummary[];
+};
+
+/**
+ * Describes the message links.backend.v1.ListMyTenantsResponse.
+ * Use `create(ListMyTenantsResponseSchema)` to create a new message.
+ */
+export const ListMyTenantsResponseSchema: GenMessage<ListMyTenantsResponse> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 10);
+
+/**
+ * @generated from message links.backend.v1.SwitchTenantRequest
+ */
+export type SwitchTenantRequest = Message<"links.backend.v1.SwitchTenantRequest"> & {
+  /**
+   * @generated from field: string tenant_id = 1;
+   */
+  tenantId: string;
+};
+
+/**
+ * Describes the message links.backend.v1.SwitchTenantRequest.
+ * Use `create(SwitchTenantRequestSchema)` to create a new message.
+ */
+export const SwitchTenantRequestSchema: GenMessage<SwitchTenantRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 11);
+
+/**
+ * @generated from message links.backend.v1.GetAccessSnapshotRequest
+ */
+export type GetAccessSnapshotRequest = Message<"links.backend.v1.GetAccessSnapshotRequest"> & {
+};
+
+/**
+ * Describes the message links.backend.v1.GetAccessSnapshotRequest.
+ * Use `create(GetAccessSnapshotRequestSchema)` to create a new message.
+ */
+export const GetAccessSnapshotRequestSchema: GenMessage<GetAccessSnapshotRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 12);
+
+/**
+ * @generated from message links.backend.v1.AccessSnapshotResponse
+ */
+export type AccessSnapshotResponse = Message<"links.backend.v1.AccessSnapshotResponse"> & {
+  /**
+   * @generated from field: links.backend.v1.AccessSnapshot access = 1;
+   */
+  access?: AccessSnapshot | undefined;
+};
+
+/**
+ * Describes the message links.backend.v1.AccessSnapshotResponse.
+ * Use `create(AccessSnapshotResponseSchema)` to create a new message.
+ */
+export const AccessSnapshotResponseSchema: GenMessage<AccessSnapshotResponse> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 13);
+
+/**
+ * @generated from message links.backend.v1.ListTenantMembersRequest
+ */
+export type ListTenantMembersRequest = Message<"links.backend.v1.ListTenantMembersRequest"> & {
+};
+
+/**
+ * Describes the message links.backend.v1.ListTenantMembersRequest.
+ * Use `create(ListTenantMembersRequestSchema)` to create a new message.
+ */
+export const ListTenantMembersRequestSchema: GenMessage<ListTenantMembersRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 14);
+
+/**
+ * @generated from message links.backend.v1.ListTenantMembersResponse
+ */
+export type ListTenantMembersResponse = Message<"links.backend.v1.ListTenantMembersResponse"> & {
+  /**
+   * @generated from field: repeated links.backend.v1.TenantMember members = 1;
+   */
+  members: TenantMember[];
+};
+
+/**
+ * Describes the message links.backend.v1.ListTenantMembersResponse.
+ * Use `create(ListTenantMembersResponseSchema)` to create a new message.
+ */
+export const ListTenantMembersResponseSchema: GenMessage<ListTenantMembersResponse> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 15);
+
+/**
+ * @generated from message links.backend.v1.InviteTenantMemberRequest
+ */
+export type InviteTenantMemberRequest = Message<"links.backend.v1.InviteTenantMemberRequest"> & {
+  /**
+   * @generated from field: string email = 1;
+   */
+  email: string;
+
+  /**
+   * @generated from field: string display_name = 2;
+   */
+  displayName: string;
+
+  /**
+   * @generated from field: string tenant_role = 3;
+   */
+  tenantRole: string;
+};
+
+/**
+ * Describes the message links.backend.v1.InviteTenantMemberRequest.
+ * Use `create(InviteTenantMemberRequestSchema)` to create a new message.
+ */
+export const InviteTenantMemberRequestSchema: GenMessage<InviteTenantMemberRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 16);
+
+/**
+ * @generated from message links.backend.v1.InviteTenantMemberResponse
+ */
+export type InviteTenantMemberResponse = Message<"links.backend.v1.InviteTenantMemberResponse"> & {
+  /**
+   * @generated from field: links.backend.v1.TenantMember member = 1;
+   */
+  member?: TenantMember | undefined;
+
+  /**
+   * @generated from field: string invite_token = 2;
+   */
+  inviteToken: string;
+};
+
+/**
+ * Describes the message links.backend.v1.InviteTenantMemberResponse.
+ * Use `create(InviteTenantMemberResponseSchema)` to create a new message.
+ */
+export const InviteTenantMemberResponseSchema: GenMessage<InviteTenantMemberResponse> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 17);
+
+/**
+ * @generated from message links.backend.v1.AcceptTenantInviteRequest
+ */
+export type AcceptTenantInviteRequest = Message<"links.backend.v1.AcceptTenantInviteRequest"> & {
+  /**
+   * @generated from field: string invite_token = 1;
+   */
+  inviteToken: string;
+
+  /**
+   * @generated from field: string display_name = 2;
+   */
+  displayName: string;
+
+  /**
+   * @generated from field: string password = 3;
+   */
+  password: string;
+};
+
+/**
+ * Describes the message links.backend.v1.AcceptTenantInviteRequest.
+ * Use `create(AcceptTenantInviteRequestSchema)` to create a new message.
+ */
+export const AcceptTenantInviteRequestSchema: GenMessage<AcceptTenantInviteRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 18);
+
+/**
+ * @generated from message links.backend.v1.GetTenantLicensesRequest
+ */
+export type GetTenantLicensesRequest = Message<"links.backend.v1.GetTenantLicensesRequest"> & {
+};
+
+/**
+ * Describes the message links.backend.v1.GetTenantLicensesRequest.
+ * Use `create(GetTenantLicensesRequestSchema)` to create a new message.
+ */
+export const GetTenantLicensesRequestSchema: GenMessage<GetTenantLicensesRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 19);
+
+/**
+ * @generated from message links.backend.v1.GetTenantLicensesResponse
+ */
+export type GetTenantLicensesResponse = Message<"links.backend.v1.GetTenantLicensesResponse"> & {
+  /**
+   * @generated from field: repeated links.backend.v1.ProductLicense licenses = 1;
+   */
+  licenses: ProductLicense[];
+};
+
+/**
+ * Describes the message links.backend.v1.GetTenantLicensesResponse.
+ * Use `create(GetTenantLicensesResponseSchema)` to create a new message.
+ */
+export const GetTenantLicensesResponseSchema: GenMessage<GetTenantLicensesResponse> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 20);
+
+/**
+ * @generated from message links.backend.v1.SetMyTenantProductSeatsRequest
+ */
+export type SetMyTenantProductSeatsRequest = Message<"links.backend.v1.SetMyTenantProductSeatsRequest"> & {
+  /**
+   * @generated from field: string product_key = 1;
+   */
+  productKey: string;
+
+  /**
+   * @generated from field: int32 seats_total = 2;
+   */
+  seatsTotal: number;
+};
+
+/**
+ * Describes the message links.backend.v1.SetMyTenantProductSeatsRequest.
+ * Use `create(SetMyTenantProductSeatsRequestSchema)` to create a new message.
+ */
+export const SetMyTenantProductSeatsRequestSchema: GenMessage<SetMyTenantProductSeatsRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 21);
+
+/**
+ * @generated from message links.backend.v1.SetMyTenantProductSeatsResponse
+ */
+export type SetMyTenantProductSeatsResponse = Message<"links.backend.v1.SetMyTenantProductSeatsResponse"> & {
+  /**
+   * @generated from field: links.backend.v1.ProductLicense license = 1;
+   */
+  license?: ProductLicense | undefined;
+};
+
+/**
+ * Describes the message links.backend.v1.SetMyTenantProductSeatsResponse.
+ * Use `create(SetMyTenantProductSeatsResponseSchema)` to create a new message.
+ */
+export const SetMyTenantProductSeatsResponseSchema: GenMessage<SetMyTenantProductSeatsResponse> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 22);
+
+/**
+ * @generated from message links.backend.v1.ListLicenseEventsRequest
+ */
+export type ListLicenseEventsRequest = Message<"links.backend.v1.ListLicenseEventsRequest"> & {
+};
+
+/**
+ * Describes the message links.backend.v1.ListLicenseEventsRequest.
+ * Use `create(ListLicenseEventsRequestSchema)` to create a new message.
+ */
+export const ListLicenseEventsRequestSchema: GenMessage<ListLicenseEventsRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 23);
+
+/**
+ * @generated from message links.backend.v1.ListLicenseEventsResponse
+ */
+export type ListLicenseEventsResponse = Message<"links.backend.v1.ListLicenseEventsResponse"> & {
+  /**
+   * @generated from field: repeated links.backend.v1.LicenseEvent events = 1;
+   */
+  events: LicenseEvent[];
+};
+
+/**
+ * Describes the message links.backend.v1.ListLicenseEventsResponse.
+ * Use `create(ListLicenseEventsResponseSchema)` to create a new message.
+ */
+export const ListLicenseEventsResponseSchema: GenMessage<ListLicenseEventsResponse> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 24);
+
+/**
+ * @generated from message links.backend.v1.ListProductAssignmentsRequest
+ */
+export type ListProductAssignmentsRequest = Message<"links.backend.v1.ListProductAssignmentsRequest"> & {
+  /**
+   * @generated from field: string product_key = 1;
+   */
+  productKey: string;
+};
+
+/**
+ * Describes the message links.backend.v1.ListProductAssignmentsRequest.
+ * Use `create(ListProductAssignmentsRequestSchema)` to create a new message.
+ */
+export const ListProductAssignmentsRequestSchema: GenMessage<ListProductAssignmentsRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 25);
+
+/**
+ * @generated from message links.backend.v1.ListProductAssignmentsResponse
+ */
+export type ListProductAssignmentsResponse = Message<"links.backend.v1.ListProductAssignmentsResponse"> & {
+  /**
+   * @generated from field: repeated links.backend.v1.ProductAssignment assignments = 1;
+   */
+  assignments: ProductAssignment[];
+};
+
+/**
+ * Describes the message links.backend.v1.ListProductAssignmentsResponse.
+ * Use `create(ListProductAssignmentsResponseSchema)` to create a new message.
+ */
+export const ListProductAssignmentsResponseSchema: GenMessage<ListProductAssignmentsResponse> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 26);
+
+/**
+ * @generated from message links.backend.v1.AssignUserToProductRequest
+ */
+export type AssignUserToProductRequest = Message<"links.backend.v1.AssignUserToProductRequest"> & {
+  /**
+   * @generated from field: string user_id = 1;
+   */
+  userId: string;
+
+  /**
+   * @generated from field: string product_key = 2;
+   */
+  productKey: string;
+
+  /**
+   * @generated from field: string role = 3;
+   */
+  role: string;
+};
+
+/**
+ * Describes the message links.backend.v1.AssignUserToProductRequest.
+ * Use `create(AssignUserToProductRequestSchema)` to create a new message.
+ */
+export const AssignUserToProductRequestSchema: GenMessage<AssignUserToProductRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 27);
+
+/**
+ * @generated from message links.backend.v1.RemoveUserFromProductRequest
+ */
+export type RemoveUserFromProductRequest = Message<"links.backend.v1.RemoveUserFromProductRequest"> & {
+  /**
+   * @generated from field: string user_id = 1;
+   */
+  userId: string;
+
+  /**
+   * @generated from field: string product_key = 2;
+   */
+  productKey: string;
+};
+
+/**
+ * Describes the message links.backend.v1.RemoveUserFromProductRequest.
+ * Use `create(RemoveUserFromProductRequestSchema)` to create a new message.
+ */
+export const RemoveUserFromProductRequestSchema: GenMessage<RemoveUserFromProductRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 28);
+
+/**
+ * @generated from message links.backend.v1.UpdateProductRoleRequest
+ */
+export type UpdateProductRoleRequest = Message<"links.backend.v1.UpdateProductRoleRequest"> & {
+  /**
+   * @generated from field: string user_id = 1;
+   */
+  userId: string;
+
+  /**
+   * @generated from field: string product_key = 2;
+   */
+  productKey: string;
+
+  /**
+   * @generated from field: string role = 3;
+   */
+  role: string;
+};
+
+/**
+ * Describes the message links.backend.v1.UpdateProductRoleRequest.
+ * Use `create(UpdateProductRoleRequestSchema)` to create a new message.
+ */
+export const UpdateProductRoleRequestSchema: GenMessage<UpdateProductRoleRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 29);
+
+/**
+ * @generated from message links.backend.v1.GetPlannerDemoRequest
+ */
+export type GetPlannerDemoRequest = Message<"links.backend.v1.GetPlannerDemoRequest"> & {
+};
+
+/**
+ * Describes the message links.backend.v1.GetPlannerDemoRequest.
+ * Use `create(GetPlannerDemoRequestSchema)` to create a new message.
+ */
+export const GetPlannerDemoRequestSchema: GenMessage<GetPlannerDemoRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 30);
+
+/**
+ * @generated from message links.backend.v1.GetFinanceDemoRequest
+ */
+export type GetFinanceDemoRequest = Message<"links.backend.v1.GetFinanceDemoRequest"> & {
+};
+
+/**
+ * Describes the message links.backend.v1.GetFinanceDemoRequest.
+ * Use `create(GetFinanceDemoRequestSchema)` to create a new message.
+ */
+export const GetFinanceDemoRequestSchema: GenMessage<GetFinanceDemoRequest> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 31);
+
+/**
+ * @generated from message links.backend.v1.DemoFeatureResponse
+ */
+export type DemoFeatureResponse = Message<"links.backend.v1.DemoFeatureResponse"> & {
+  /**
+   * @generated from field: string product_key = 1;
+   */
+  productKey: string;
+
+  /**
+   * @generated from field: string title = 2;
+   */
+  title: string;
+
+  /**
+   * @generated from field: string message = 3;
+   */
+  message: string;
+};
+
+/**
+ * Describes the message links.backend.v1.DemoFeatureResponse.
+ * Use `create(DemoFeatureResponseSchema)` to create a new message.
+ */
+export const DemoFeatureResponseSchema: GenMessage<DemoFeatureResponse> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 32);
+
+/**
+ * @generated from message links.backend.v1.Session
+ */
+export type Session = Message<"links.backend.v1.Session"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string user_id = 2;
+   */
+  userId: string;
+
+  /**
+   * @generated from field: string active_tenant_id = 3;
+   */
+  activeTenantId: string;
+
+  /**
+   * @generated from field: string expires_at = 4;
+   */
+  expiresAt: string;
+};
+
+/**
+ * Describes the message links.backend.v1.Session.
+ * Use `create(SessionSchema)` to create a new message.
+ */
+export const SessionSchema: GenMessage<Session> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 33);
+
+/**
+ * @generated from message links.backend.v1.AccessSnapshot
+ */
+export type AccessSnapshot = Message<"links.backend.v1.AccessSnapshot"> & {
+  /**
+   * @generated from field: links.backend.v1.AccessUser user = 1;
+   */
+  user?: AccessUser | undefined;
+
+  /**
+   * @generated from field: links.backend.v1.ActiveTenant active_tenant = 2;
+   */
+  activeTenant?: ActiveTenant | undefined;
+
+  /**
+   * @generated from field: repeated links.backend.v1.TenantSummary tenants = 3;
+   */
+  tenants: TenantSummary[];
+
+  /**
+   * @generated from field: repeated links.backend.v1.ProductAccess products = 4;
+   */
+  products: ProductAccess[];
+};
+
+/**
+ * Describes the message links.backend.v1.AccessSnapshot.
+ * Use `create(AccessSnapshotSchema)` to create a new message.
+ */
+export const AccessSnapshotSchema: GenMessage<AccessSnapshot> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 34);
+
+/**
+ * @generated from message links.backend.v1.AccessUser
+ */
+export type AccessUser = Message<"links.backend.v1.AccessUser"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string email = 2;
+   */
+  email: string;
+
+  /**
+   * @generated from field: string display_name = 3;
+   */
+  displayName: string;
+
+  /**
+   * @generated from field: string platform_role = 4;
+   */
+  platformRole: string;
+};
+
+/**
+ * Describes the message links.backend.v1.AccessUser.
+ * Use `create(AccessUserSchema)` to create a new message.
+ */
+export const AccessUserSchema: GenMessage<AccessUser> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 35);
+
+/**
+ * @generated from message links.backend.v1.ActiveTenant
+ */
+export type ActiveTenant = Message<"links.backend.v1.ActiveTenant"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string slug = 3;
+   */
+  slug: string;
+
+  /**
+   * @generated from field: string role = 4;
+   */
+  role: string;
+};
+
+/**
+ * Describes the message links.backend.v1.ActiveTenant.
+ * Use `create(ActiveTenantSchema)` to create a new message.
+ */
+export const ActiveTenantSchema: GenMessage<ActiveTenant> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 36);
+
+/**
+ * @generated from message links.backend.v1.TenantSummary
+ */
+export type TenantSummary = Message<"links.backend.v1.TenantSummary"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string slug = 3;
+   */
+  slug: string;
+
+  /**
+   * @generated from field: string role = 4;
+   */
+  role: string;
+
+  /**
+   * @generated from field: string status = 5;
+   */
+  status: string;
+};
+
+/**
+ * Describes the message links.backend.v1.TenantSummary.
+ * Use `create(TenantSummarySchema)` to create a new message.
+ */
+export const TenantSummarySchema: GenMessage<TenantSummary> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 37);
+
+/**
+ * @generated from message links.backend.v1.ProductAccess
+ */
+export type ProductAccess = Message<"links.backend.v1.ProductAccess"> & {
+  /**
+   * @generated from field: string key = 1;
+   */
+  key: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string status = 3;
+   */
+  status: string;
+
+  /**
+   * @generated from field: bool assigned = 4;
+   */
+  assigned: boolean;
+
+  /**
+   * @generated from field: string role = 5;
+   */
+  role: string;
+
+  /**
+   * @generated from field: repeated string permissions = 6;
+   */
+  permissions: string[];
+
+  /**
+   * @generated from field: int32 seats_total = 7;
+   */
+  seatsTotal: number;
+
+  /**
+   * @generated from field: int32 seats_used = 8;
+   */
+  seatsUsed: number;
+};
+
+/**
+ * Describes the message links.backend.v1.ProductAccess.
+ * Use `create(ProductAccessSchema)` to create a new message.
+ */
+export const ProductAccessSchema: GenMessage<ProductAccess> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 38);
+
+/**
+ * @generated from message links.backend.v1.TenantMember
+ */
+export type TenantMember = Message<"links.backend.v1.TenantMember"> & {
+  /**
+   * @generated from field: string user_id = 1;
+   */
+  userId: string;
+
+  /**
+   * @generated from field: string email = 2;
+   */
+  email: string;
+
+  /**
+   * @generated from field: string display_name = 3;
+   */
+  displayName: string;
+
+  /**
+   * @generated from field: string tenant_role = 4;
+   */
+  tenantRole: string;
+
+  /**
+   * @generated from field: string status = 5;
+   */
+  status: string;
+};
+
+/**
+ * Describes the message links.backend.v1.TenantMember.
+ * Use `create(TenantMemberSchema)` to create a new message.
+ */
+export const TenantMemberSchema: GenMessage<TenantMember> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 39);
+
+/**
+ * @generated from message links.backend.v1.ProductLicense
+ */
+export type ProductLicense = Message<"links.backend.v1.ProductLicense"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string product_key = 2;
+   */
+  productKey: string;
+
+  /**
+   * @generated from field: string product_name = 3;
+   */
+  productName: string;
+
+  /**
+   * @generated from field: int32 seats_total = 4;
+   */
+  seatsTotal: number;
+
+  /**
+   * @generated from field: int32 seats_used = 5;
+   */
+  seatsUsed: number;
+
+  /**
+   * @generated from field: string status = 6;
+   */
+  status: string;
+
+  /**
+   * @generated from field: string source = 7;
+   */
+  source: string;
+
+  /**
+   * @generated from field: string updated_at = 8;
+   */
+  updatedAt: string;
+};
+
+/**
+ * Describes the message links.backend.v1.ProductLicense.
+ * Use `create(ProductLicenseSchema)` to create a new message.
+ */
+export const ProductLicenseSchema: GenMessage<ProductLicense> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 40);
+
+/**
+ * @generated from message links.backend.v1.ProductAssignment
+ */
+export type ProductAssignment = Message<"links.backend.v1.ProductAssignment"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string tenant_id = 2;
+   */
+  tenantId: string;
+
+  /**
+   * @generated from field: string user_id = 3;
+   */
+  userId: string;
+
+  /**
+   * @generated from field: string email = 4;
+   */
+  email: string;
+
+  /**
+   * @generated from field: string display_name = 5;
+   */
+  displayName: string;
+
+  /**
+   * @generated from field: string product_key = 6;
+   */
+  productKey: string;
+
+  /**
+   * @generated from field: string product_name = 7;
+   */
+  productName: string;
+
+  /**
+   * @generated from field: string role = 8;
+   */
+  role: string;
+
+  /**
+   * @generated from field: string status = 9;
+   */
+  status: string;
+
+  /**
+   * @generated from field: string assigned_at = 10;
+   */
+  assignedAt: string;
+};
+
+/**
+ * Describes the message links.backend.v1.ProductAssignment.
+ * Use `create(ProductAssignmentSchema)` to create a new message.
+ */
+export const ProductAssignmentSchema: GenMessage<ProductAssignment> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 41);
+
+/**
+ * @generated from message links.backend.v1.LicenseEvent
+ */
+export type LicenseEvent = Message<"links.backend.v1.LicenseEvent"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string product_key = 2;
+   */
+  productKey: string;
+
+  /**
+   * @generated from field: string type = 3;
+   */
+  type: string;
+
+  /**
+   * @generated from field: int32 seats_before = 4;
+   */
+  seatsBefore: number;
+
+  /**
+   * @generated from field: int32 seats_after = 5;
+   */
+  seatsAfter: number;
+
+  /**
+   * @generated from field: string source = 6;
+   */
+  source: string;
+
+  /**
+   * @generated from field: string actor_user_id = 7;
+   */
+  actorUserId: string;
+
+  /**
+   * @generated from field: string created_at = 8;
+   */
+  createdAt: string;
+};
+
+/**
+ * Describes the message links.backend.v1.LicenseEvent.
+ * Use `create(LicenseEventSchema)` to create a new message.
+ */
+export const LicenseEventSchema: GenMessage<LicenseEvent> = /*@__PURE__*/
+  messageDesc(file_proto_links_backend_v1_backend, 42);
+
+/**
  * @generated from service links.backend.v1.BackendService
  */
 export const BackendService: GenService<{
@@ -61,4 +1072,205 @@ export const BackendService: GenService<{
   },
 }> = /*@__PURE__*/
   serviceDesc(file_proto_links_backend_v1_backend, 0);
+
+/**
+ * @generated from service links.backend.v1.AuthService
+ */
+export const AuthService: GenService<{
+  /**
+   * @generated from rpc links.backend.v1.AuthService.Register
+   */
+  register: {
+    methodKind: "unary";
+    input: typeof RegisterRequestSchema;
+    output: typeof AuthResponseSchema;
+  },
+  /**
+   * @generated from rpc links.backend.v1.AuthService.Login
+   */
+  login: {
+    methodKind: "unary";
+    input: typeof LoginRequestSchema;
+    output: typeof AuthResponseSchema;
+  },
+  /**
+   * @generated from rpc links.backend.v1.AuthService.Logout
+   */
+  logout: {
+    methodKind: "unary";
+    input: typeof LogoutRequestSchema;
+    output: typeof LogoutResponseSchema;
+  },
+  /**
+   * @generated from rpc links.backend.v1.AuthService.GetSession
+   */
+  getSession: {
+    methodKind: "unary";
+    input: typeof GetSessionRequestSchema;
+    output: typeof GetSessionResponseSchema;
+  },
+}> = /*@__PURE__*/
+  serviceDesc(file_proto_links_backend_v1_backend, 1);
+
+/**
+ * @generated from service links.backend.v1.TenantService
+ */
+export const TenantService: GenService<{
+  /**
+   * @generated from rpc links.backend.v1.TenantService.ListMyTenants
+   */
+  listMyTenants: {
+    methodKind: "unary";
+    input: typeof ListMyTenantsRequestSchema;
+    output: typeof ListMyTenantsResponseSchema;
+  },
+  /**
+   * @generated from rpc links.backend.v1.TenantService.SwitchTenant
+   */
+  switchTenant: {
+    methodKind: "unary";
+    input: typeof SwitchTenantRequestSchema;
+    output: typeof AccessSnapshotResponseSchema;
+  },
+}> = /*@__PURE__*/
+  serviceDesc(file_proto_links_backend_v1_backend, 2);
+
+/**
+ * @generated from service links.backend.v1.EntitlementService
+ */
+export const EntitlementService: GenService<{
+  /**
+   * @generated from rpc links.backend.v1.EntitlementService.GetAccessSnapshot
+   */
+  getAccessSnapshot: {
+    methodKind: "unary";
+    input: typeof GetAccessSnapshotRequestSchema;
+    output: typeof AccessSnapshotResponseSchema;
+  },
+}> = /*@__PURE__*/
+  serviceDesc(file_proto_links_backend_v1_backend, 3);
+
+/**
+ * @generated from service links.backend.v1.MembershipService
+ */
+export const MembershipService: GenService<{
+  /**
+   * @generated from rpc links.backend.v1.MembershipService.ListTenantMembers
+   */
+  listTenantMembers: {
+    methodKind: "unary";
+    input: typeof ListTenantMembersRequestSchema;
+    output: typeof ListTenantMembersResponseSchema;
+  },
+  /**
+   * @generated from rpc links.backend.v1.MembershipService.InviteTenantMember
+   */
+  inviteTenantMember: {
+    methodKind: "unary";
+    input: typeof InviteTenantMemberRequestSchema;
+    output: typeof InviteTenantMemberResponseSchema;
+  },
+  /**
+   * @generated from rpc links.backend.v1.MembershipService.AcceptTenantInvite
+   */
+  acceptTenantInvite: {
+    methodKind: "unary";
+    input: typeof AcceptTenantInviteRequestSchema;
+    output: typeof AuthResponseSchema;
+  },
+}> = /*@__PURE__*/
+  serviceDesc(file_proto_links_backend_v1_backend, 4);
+
+/**
+ * @generated from service links.backend.v1.LicensingService
+ */
+export const LicensingService: GenService<{
+  /**
+   * @generated from rpc links.backend.v1.LicensingService.GetTenantLicenses
+   */
+  getTenantLicenses: {
+    methodKind: "unary";
+    input: typeof GetTenantLicensesRequestSchema;
+    output: typeof GetTenantLicensesResponseSchema;
+  },
+  /**
+   * @generated from rpc links.backend.v1.LicensingService.SetMyTenantProductSeats
+   */
+  setMyTenantProductSeats: {
+    methodKind: "unary";
+    input: typeof SetMyTenantProductSeatsRequestSchema;
+    output: typeof SetMyTenantProductSeatsResponseSchema;
+  },
+  /**
+   * @generated from rpc links.backend.v1.LicensingService.ListLicenseEvents
+   */
+  listLicenseEvents: {
+    methodKind: "unary";
+    input: typeof ListLicenseEventsRequestSchema;
+    output: typeof ListLicenseEventsResponseSchema;
+  },
+}> = /*@__PURE__*/
+  serviceDesc(file_proto_links_backend_v1_backend, 5);
+
+/**
+ * @generated from service links.backend.v1.AssignmentService
+ */
+export const AssignmentService: GenService<{
+  /**
+   * @generated from rpc links.backend.v1.AssignmentService.ListProductAssignments
+   */
+  listProductAssignments: {
+    methodKind: "unary";
+    input: typeof ListProductAssignmentsRequestSchema;
+    output: typeof ListProductAssignmentsResponseSchema;
+  },
+  /**
+   * @generated from rpc links.backend.v1.AssignmentService.AssignUserToProduct
+   */
+  assignUserToProduct: {
+    methodKind: "unary";
+    input: typeof AssignUserToProductRequestSchema;
+    output: typeof ProductAssignmentSchema;
+  },
+  /**
+   * @generated from rpc links.backend.v1.AssignmentService.RemoveUserFromProduct
+   */
+  removeUserFromProduct: {
+    methodKind: "unary";
+    input: typeof RemoveUserFromProductRequestSchema;
+    output: typeof ProductAssignmentSchema;
+  },
+  /**
+   * @generated from rpc links.backend.v1.AssignmentService.UpdateProductRole
+   */
+  updateProductRole: {
+    methodKind: "unary";
+    input: typeof UpdateProductRoleRequestSchema;
+    output: typeof ProductAssignmentSchema;
+  },
+}> = /*@__PURE__*/
+  serviceDesc(file_proto_links_backend_v1_backend, 6);
+
+/**
+ * @generated from service links.backend.v1.DemoService
+ */
+export const DemoService: GenService<{
+  /**
+   * @generated from rpc links.backend.v1.DemoService.GetPlannerDemo
+   */
+  getPlannerDemo: {
+    methodKind: "unary";
+    input: typeof GetPlannerDemoRequestSchema;
+    output: typeof DemoFeatureResponseSchema;
+  },
+  /**
+   * @generated from rpc links.backend.v1.DemoService.GetFinanceDemo
+   */
+  getFinanceDemo: {
+    methodKind: "unary";
+    input: typeof GetFinanceDemoRequestSchema;
+    output: typeof DemoFeatureResponseSchema;
+  },
+}> = /*@__PURE__*/
+  serviceDesc(file_proto_links_backend_v1_backend, 7);
 

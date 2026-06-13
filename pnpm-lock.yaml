@@ -209,6 +209,9 @@ importers:
 
   app/web/admin:
     dependencies:
+      '@links/auth-client':
+        specifier: workspace:*
+        version: link:../../../packages/auth-client
       '@links/rpc-client':
         specifier: workspace:*
         version: link:../../../packages/rpc-client
@@ -408,7 +411,27 @@ importers:
         specifier: ^8.0.16
         version: 8.0.16(@types/node@24.13.2)(jiti@2.7.0)
 
-  packages/auth-client: {}
+  packages/access-core:
+    devDependencies:
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
+
+  packages/auth-client:
+    dependencies:
+      '@connectrpc/connect':
+        specifier: ^2.1.1
+        version: 2.1.1(@bufbuild/protobuf@2.12.0)
+      '@links/access-core':
+        specifier: workspace:*
+        version: link:../access-core
+      '@links/rpc-client':
+        specifier: workspace:*
+        version: link:../rpc-client
+    devDependencies:
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
 
   packages/contracts: {}
 
@@ -431,6 +454,13 @@ importers:
         version: 6.0.3
 
   packages/ui-svelte:
+    dependencies:
+      '@links/access-core':
+        specifier: workspace:*
+        version: link:../access-core
+      '@links/auth-client':
+        specifier: workspace:*
+        version: link:../auth-client
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1

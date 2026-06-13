@@ -4,6 +4,6 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "gen": "buf generate"
+    "gen": "go run github.com/bufbuild/buf/cmd/buf@v1.57.2 generate"
   }
 }

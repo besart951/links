@@ -109,6 +109,2298 @@ func (x *GetHealthResponse) GetDb() string {
 	return ""
 }
 
+type RegisterRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Email         string                 `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
+	Password      string                 `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
+	DisplayName   string                 `protobuf:"bytes,3,opt,name=display_name,json=displayName,proto3" json:"display_name,omitempty"`
+	TenantName    string                 `protobuf:"bytes,4,opt,name=tenant_name,json=tenantName,proto3" json:"tenant_name,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *RegisterRequest) Reset() {
+	*x = RegisterRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[2]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *RegisterRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RegisterRequest) ProtoMessage() {}
+
+func (x *RegisterRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[2]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RegisterRequest.ProtoReflect.Descriptor instead.
+func (*RegisterRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *RegisterRequest) GetEmail() string {
+	if x != nil {
+		return x.Email
+	}
+	return ""
+}
+
+func (x *RegisterRequest) GetPassword() string {
+	if x != nil {
+		return x.Password
+	}
+	return ""
+}
+
+func (x *RegisterRequest) GetDisplayName() string {
+	if x != nil {
+		return x.DisplayName
+	}
+	return ""
+}
+
+func (x *RegisterRequest) GetTenantName() string {
+	if x != nil {
+		return x.TenantName
+	}
+	return ""
+}
+
+type LoginRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Email         string                 `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
+	Password      string                 `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *LoginRequest) Reset() {
+	*x = LoginRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[3]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *LoginRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*LoginRequest) ProtoMessage() {}
+
+func (x *LoginRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[3]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use LoginRequest.ProtoReflect.Descriptor instead.
+func (*LoginRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *LoginRequest) GetEmail() string {
+	if x != nil {
+		return x.Email
+	}
+	return ""
+}
+
+func (x *LoginRequest) GetPassword() string {
+	if x != nil {
+		return x.Password
+	}
+	return ""
+}
+
+type AuthResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Session       *Session               `protobuf:"bytes,1,opt,name=session,proto3" json:"session,omitempty"`
+	Access        *AccessSnapshot        `protobuf:"bytes,2,opt,name=access,proto3" json:"access,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *AuthResponse) Reset() {
+	*x = AuthResponse{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[4]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *AuthResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AuthResponse) ProtoMessage() {}
+
+func (x *AuthResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[4]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AuthResponse.ProtoReflect.Descriptor instead.
+func (*AuthResponse) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *AuthResponse) GetSession() *Session {
+	if x != nil {
+		return x.Session
+	}
+	return nil
+}
+
+func (x *AuthResponse) GetAccess() *AccessSnapshot {
+	if x != nil {
+		return x.Access
+	}
+	return nil
+}
+
+type LogoutRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *LogoutRequest) Reset() {
+	*x = LogoutRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[5]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *LogoutRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*LogoutRequest) ProtoMessage() {}
+
+func (x *LogoutRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[5]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use LogoutRequest.ProtoReflect.Descriptor instead.
+func (*LogoutRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{5}
+}
+
+type LogoutResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Ok            bool                   `protobuf:"varint,1,opt,name=ok,proto3" json:"ok,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *LogoutResponse) Reset() {
+	*x = LogoutResponse{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[6]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *LogoutResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*LogoutResponse) ProtoMessage() {}
+
+func (x *LogoutResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[6]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use LogoutResponse.ProtoReflect.Descriptor instead.
+func (*LogoutResponse) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *LogoutResponse) GetOk() bool {
+	if x != nil {
+		return x.Ok
+	}
+	return false
+}
+
+type GetSessionRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetSessionRequest) Reset() {
+	*x = GetSessionRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[7]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetSessionRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetSessionRequest) ProtoMessage() {}
+
+func (x *GetSessionRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[7]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetSessionRequest.ProtoReflect.Descriptor instead.
+func (*GetSessionRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{7}
+}
+
+type GetSessionResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Authenticated bool                   `protobuf:"varint,1,opt,name=authenticated,proto3" json:"authenticated,omitempty"`
+	Session       *Session               `protobuf:"bytes,2,opt,name=session,proto3" json:"session,omitempty"`
+	Access        *AccessSnapshot        `protobuf:"bytes,3,opt,name=access,proto3" json:"access,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetSessionResponse) Reset() {
+	*x = GetSessionResponse{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[8]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetSessionResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetSessionResponse) ProtoMessage() {}
+
+func (x *GetSessionResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[8]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetSessionResponse.ProtoReflect.Descriptor instead.
+func (*GetSessionResponse) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{8}
+}
+
+func (x *GetSessionResponse) GetAuthenticated() bool {
+	if x != nil {
+		return x.Authenticated
+	}
+	return false
+}
+
+func (x *GetSessionResponse) GetSession() *Session {
+	if x != nil {
+		return x.Session
+	}
+	return nil
+}
+
+func (x *GetSessionResponse) GetAccess() *AccessSnapshot {
+	if x != nil {
+		return x.Access
+	}
+	return nil
+}
+
+type ListMyTenantsRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListMyTenantsRequest) Reset() {
+	*x = ListMyTenantsRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[9]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListMyTenantsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListMyTenantsRequest) ProtoMessage() {}
+
+func (x *ListMyTenantsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[9]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListMyTenantsRequest.ProtoReflect.Descriptor instead.
+func (*ListMyTenantsRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{9}
+}
+
+type ListMyTenantsResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Tenants       []*TenantSummary       `protobuf:"bytes,1,rep,name=tenants,proto3" json:"tenants,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListMyTenantsResponse) Reset() {
+	*x = ListMyTenantsResponse{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[10]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListMyTenantsResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListMyTenantsResponse) ProtoMessage() {}
+
+func (x *ListMyTenantsResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[10]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListMyTenantsResponse.ProtoReflect.Descriptor instead.
+func (*ListMyTenantsResponse) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{10}
+}
+
+func (x *ListMyTenantsResponse) GetTenants() []*TenantSummary {
+	if x != nil {
+		return x.Tenants
+	}
+	return nil
+}
+
+type SwitchTenantRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	TenantId      string                 `protobuf:"bytes,1,opt,name=tenant_id,json=tenantId,proto3" json:"tenant_id,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *SwitchTenantRequest) Reset() {
+	*x = SwitchTenantRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[11]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SwitchTenantRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SwitchTenantRequest) ProtoMessage() {}
+
+func (x *SwitchTenantRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[11]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SwitchTenantRequest.ProtoReflect.Descriptor instead.
+func (*SwitchTenantRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{11}
+}
+
+func (x *SwitchTenantRequest) GetTenantId() string {
+	if x != nil {
+		return x.TenantId
+	}
+	return ""
+}
+
+type GetAccessSnapshotRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetAccessSnapshotRequest) Reset() {
+	*x = GetAccessSnapshotRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[12]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetAccessSnapshotRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetAccessSnapshotRequest) ProtoMessage() {}
+
+func (x *GetAccessSnapshotRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[12]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetAccessSnapshotRequest.ProtoReflect.Descriptor instead.
+func (*GetAccessSnapshotRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{12}
+}
+
+type AccessSnapshotResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Access        *AccessSnapshot        `protobuf:"bytes,1,opt,name=access,proto3" json:"access,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *AccessSnapshotResponse) Reset() {
+	*x = AccessSnapshotResponse{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[13]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *AccessSnapshotResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AccessSnapshotResponse) ProtoMessage() {}
+
+func (x *AccessSnapshotResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[13]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AccessSnapshotResponse.ProtoReflect.Descriptor instead.
+func (*AccessSnapshotResponse) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{13}
+}
+
+func (x *AccessSnapshotResponse) GetAccess() *AccessSnapshot {
+	if x != nil {
+		return x.Access
+	}
+	return nil
+}
+
+type ListTenantMembersRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListTenantMembersRequest) Reset() {
+	*x = ListTenantMembersRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[14]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListTenantMembersRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListTenantMembersRequest) ProtoMessage() {}
+
+func (x *ListTenantMembersRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[14]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListTenantMembersRequest.ProtoReflect.Descriptor instead.
+func (*ListTenantMembersRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{14}
+}
+
+type ListTenantMembersResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Members       []*TenantMember        `protobuf:"bytes,1,rep,name=members,proto3" json:"members,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListTenantMembersResponse) Reset() {
+	*x = ListTenantMembersResponse{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[15]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListTenantMembersResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListTenantMembersResponse) ProtoMessage() {}
+
+func (x *ListTenantMembersResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[15]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListTenantMembersResponse.ProtoReflect.Descriptor instead.
+func (*ListTenantMembersResponse) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{15}
+}
+
+func (x *ListTenantMembersResponse) GetMembers() []*TenantMember {
+	if x != nil {
+		return x.Members
+	}
+	return nil
+}
+
+type InviteTenantMemberRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Email         string                 `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
+	DisplayName   string                 `protobuf:"bytes,2,opt,name=display_name,json=displayName,proto3" json:"display_name,omitempty"`
+	TenantRole    string                 `protobuf:"bytes,3,opt,name=tenant_role,json=tenantRole,proto3" json:"tenant_role,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *InviteTenantMemberRequest) Reset() {
+	*x = InviteTenantMemberRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[16]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *InviteTenantMemberRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*InviteTenantMemberRequest) ProtoMessage() {}
+
+func (x *InviteTenantMemberRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[16]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use InviteTenantMemberRequest.ProtoReflect.Descriptor instead.
+func (*InviteTenantMemberRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{16}
+}
+
+func (x *InviteTenantMemberRequest) GetEmail() string {
+	if x != nil {
+		return x.Email
+	}
+	return ""
+}
+
+func (x *InviteTenantMemberRequest) GetDisplayName() string {
+	if x != nil {
+		return x.DisplayName
+	}
+	return ""
+}
+
+func (x *InviteTenantMemberRequest) GetTenantRole() string {
+	if x != nil {
+		return x.TenantRole
+	}
+	return ""
+}
+
+type InviteTenantMemberResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Member        *TenantMember          `protobuf:"bytes,1,opt,name=member,proto3" json:"member,omitempty"`
+	InviteToken   string                 `protobuf:"bytes,2,opt,name=invite_token,json=inviteToken,proto3" json:"invite_token,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *InviteTenantMemberResponse) Reset() {
+	*x = InviteTenantMemberResponse{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[17]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *InviteTenantMemberResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*InviteTenantMemberResponse) ProtoMessage() {}
+
+func (x *InviteTenantMemberResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[17]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use InviteTenantMemberResponse.ProtoReflect.Descriptor instead.
+func (*InviteTenantMemberResponse) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{17}
+}
+
+func (x *InviteTenantMemberResponse) GetMember() *TenantMember {
+	if x != nil {
+		return x.Member
+	}
+	return nil
+}
+
+func (x *InviteTenantMemberResponse) GetInviteToken() string {
+	if x != nil {
+		return x.InviteToken
+	}
+	return ""
+}
+
+type AcceptTenantInviteRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	InviteToken   string                 `protobuf:"bytes,1,opt,name=invite_token,json=inviteToken,proto3" json:"invite_token,omitempty"`
+	DisplayName   string                 `protobuf:"bytes,2,opt,name=display_name,json=displayName,proto3" json:"display_name,omitempty"`
+	Password      string                 `protobuf:"bytes,3,opt,name=password,proto3" json:"password,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *AcceptTenantInviteRequest) Reset() {
+	*x = AcceptTenantInviteRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[18]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *AcceptTenantInviteRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AcceptTenantInviteRequest) ProtoMessage() {}
+
+func (x *AcceptTenantInviteRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[18]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AcceptTenantInviteRequest.ProtoReflect.Descriptor instead.
+func (*AcceptTenantInviteRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{18}
+}
+
+func (x *AcceptTenantInviteRequest) GetInviteToken() string {
+	if x != nil {
+		return x.InviteToken
+	}
+	return ""
+}
+
+func (x *AcceptTenantInviteRequest) GetDisplayName() string {
+	if x != nil {
+		return x.DisplayName
+	}
+	return ""
+}
+
+func (x *AcceptTenantInviteRequest) GetPassword() string {
+	if x != nil {
+		return x.Password
+	}
+	return ""
+}
+
+type GetTenantLicensesRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetTenantLicensesRequest) Reset() {
+	*x = GetTenantLicensesRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[19]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetTenantLicensesRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetTenantLicensesRequest) ProtoMessage() {}
+
+func (x *GetTenantLicensesRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[19]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetTenantLicensesRequest.ProtoReflect.Descriptor instead.
+func (*GetTenantLicensesRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{19}
+}
+
+type GetTenantLicensesResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Licenses      []*ProductLicense      `protobuf:"bytes,1,rep,name=licenses,proto3" json:"licenses,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetTenantLicensesResponse) Reset() {
+	*x = GetTenantLicensesResponse{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[20]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetTenantLicensesResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetTenantLicensesResponse) ProtoMessage() {}
+
+func (x *GetTenantLicensesResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[20]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetTenantLicensesResponse.ProtoReflect.Descriptor instead.
+func (*GetTenantLicensesResponse) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{20}
+}
+
+func (x *GetTenantLicensesResponse) GetLicenses() []*ProductLicense {
+	if x != nil {
+		return x.Licenses
+	}
+	return nil
+}
+
+type SetMyTenantProductSeatsRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	ProductKey    string                 `protobuf:"bytes,1,opt,name=product_key,json=productKey,proto3" json:"product_key,omitempty"`
+	SeatsTotal    int32                  `protobuf:"varint,2,opt,name=seats_total,json=seatsTotal,proto3" json:"seats_total,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *SetMyTenantProductSeatsRequest) Reset() {
+	*x = SetMyTenantProductSeatsRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[21]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SetMyTenantProductSeatsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SetMyTenantProductSeatsRequest) ProtoMessage() {}
+
+func (x *SetMyTenantProductSeatsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[21]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SetMyTenantProductSeatsRequest.ProtoReflect.Descriptor instead.
+func (*SetMyTenantProductSeatsRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{21}
+}
+
+func (x *SetMyTenantProductSeatsRequest) GetProductKey() string {
+	if x != nil {
+		return x.ProductKey
+	}
+	return ""
+}
+
+func (x *SetMyTenantProductSeatsRequest) GetSeatsTotal() int32 {
+	if x != nil {
+		return x.SeatsTotal
+	}
+	return 0
+}
+
+type SetMyTenantProductSeatsResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	License       *ProductLicense        `protobuf:"bytes,1,opt,name=license,proto3" json:"license,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *SetMyTenantProductSeatsResponse) Reset() {
+	*x = SetMyTenantProductSeatsResponse{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[22]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SetMyTenantProductSeatsResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SetMyTenantProductSeatsResponse) ProtoMessage() {}
+
+func (x *SetMyTenantProductSeatsResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[22]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SetMyTenantProductSeatsResponse.ProtoReflect.Descriptor instead.
+func (*SetMyTenantProductSeatsResponse) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{22}
+}
+
+func (x *SetMyTenantProductSeatsResponse) GetLicense() *ProductLicense {
+	if x != nil {
+		return x.License
+	}
+	return nil
+}
+
+type ListLicenseEventsRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListLicenseEventsRequest) Reset() {
+	*x = ListLicenseEventsRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[23]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListLicenseEventsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListLicenseEventsRequest) ProtoMessage() {}
+
+func (x *ListLicenseEventsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[23]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListLicenseEventsRequest.ProtoReflect.Descriptor instead.
+func (*ListLicenseEventsRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{23}
+}
+
+type ListLicenseEventsResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Events        []*LicenseEvent        `protobuf:"bytes,1,rep,name=events,proto3" json:"events,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListLicenseEventsResponse) Reset() {
+	*x = ListLicenseEventsResponse{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[24]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListLicenseEventsResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListLicenseEventsResponse) ProtoMessage() {}
+
+func (x *ListLicenseEventsResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[24]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListLicenseEventsResponse.ProtoReflect.Descriptor instead.
+func (*ListLicenseEventsResponse) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{24}
+}
+
+func (x *ListLicenseEventsResponse) GetEvents() []*LicenseEvent {
+	if x != nil {
+		return x.Events
+	}
+	return nil
+}
+
+type ListProductAssignmentsRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	ProductKey    string                 `protobuf:"bytes,1,opt,name=product_key,json=productKey,proto3" json:"product_key,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListProductAssignmentsRequest) Reset() {
+	*x = ListProductAssignmentsRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[25]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListProductAssignmentsRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListProductAssignmentsRequest) ProtoMessage() {}
+
+func (x *ListProductAssignmentsRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[25]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListProductAssignmentsRequest.ProtoReflect.Descriptor instead.
+func (*ListProductAssignmentsRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{25}
+}
+
+func (x *ListProductAssignmentsRequest) GetProductKey() string {
+	if x != nil {
+		return x.ProductKey
+	}
+	return ""
+}
+
+type ListProductAssignmentsResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Assignments   []*ProductAssignment   `protobuf:"bytes,1,rep,name=assignments,proto3" json:"assignments,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ListProductAssignmentsResponse) Reset() {
+	*x = ListProductAssignmentsResponse{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[26]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ListProductAssignmentsResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ListProductAssignmentsResponse) ProtoMessage() {}
+
+func (x *ListProductAssignmentsResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[26]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ListProductAssignmentsResponse.ProtoReflect.Descriptor instead.
+func (*ListProductAssignmentsResponse) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{26}
+}
+
+func (x *ListProductAssignmentsResponse) GetAssignments() []*ProductAssignment {
+	if x != nil {
+		return x.Assignments
+	}
+	return nil
+}
+
+type AssignUserToProductRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserId        string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	ProductKey    string                 `protobuf:"bytes,2,opt,name=product_key,json=productKey,proto3" json:"product_key,omitempty"`
+	Role          string                 `protobuf:"bytes,3,opt,name=role,proto3" json:"role,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *AssignUserToProductRequest) Reset() {
+	*x = AssignUserToProductRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[27]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *AssignUserToProductRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AssignUserToProductRequest) ProtoMessage() {}
+
+func (x *AssignUserToProductRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[27]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AssignUserToProductRequest.ProtoReflect.Descriptor instead.
+func (*AssignUserToProductRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{27}
+}
+
+func (x *AssignUserToProductRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *AssignUserToProductRequest) GetProductKey() string {
+	if x != nil {
+		return x.ProductKey
+	}
+	return ""
+}
+
+func (x *AssignUserToProductRequest) GetRole() string {
+	if x != nil {
+		return x.Role
+	}
+	return ""
+}
+
+type RemoveUserFromProductRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserId        string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	ProductKey    string                 `protobuf:"bytes,2,opt,name=product_key,json=productKey,proto3" json:"product_key,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *RemoveUserFromProductRequest) Reset() {
+	*x = RemoveUserFromProductRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[28]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *RemoveUserFromProductRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RemoveUserFromProductRequest) ProtoMessage() {}
+
+func (x *RemoveUserFromProductRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[28]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RemoveUserFromProductRequest.ProtoReflect.Descriptor instead.
+func (*RemoveUserFromProductRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{28}
+}
+
+func (x *RemoveUserFromProductRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *RemoveUserFromProductRequest) GetProductKey() string {
+	if x != nil {
+		return x.ProductKey
+	}
+	return ""
+}
+
+type UpdateProductRoleRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserId        string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	ProductKey    string                 `protobuf:"bytes,2,opt,name=product_key,json=productKey,proto3" json:"product_key,omitempty"`
+	Role          string                 `protobuf:"bytes,3,opt,name=role,proto3" json:"role,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *UpdateProductRoleRequest) Reset() {
+	*x = UpdateProductRoleRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[29]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *UpdateProductRoleRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UpdateProductRoleRequest) ProtoMessage() {}
+
+func (x *UpdateProductRoleRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[29]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UpdateProductRoleRequest.ProtoReflect.Descriptor instead.
+func (*UpdateProductRoleRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{29}
+}
+
+func (x *UpdateProductRoleRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *UpdateProductRoleRequest) GetProductKey() string {
+	if x != nil {
+		return x.ProductKey
+	}
+	return ""
+}
+
+func (x *UpdateProductRoleRequest) GetRole() string {
+	if x != nil {
+		return x.Role
+	}
+	return ""
+}
+
+type GetPlannerDemoRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetPlannerDemoRequest) Reset() {
+	*x = GetPlannerDemoRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[30]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetPlannerDemoRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetPlannerDemoRequest) ProtoMessage() {}
+
+func (x *GetPlannerDemoRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[30]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetPlannerDemoRequest.ProtoReflect.Descriptor instead.
+func (*GetPlannerDemoRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{30}
+}
+
+type GetFinanceDemoRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetFinanceDemoRequest) Reset() {
+	*x = GetFinanceDemoRequest{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[31]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetFinanceDemoRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetFinanceDemoRequest) ProtoMessage() {}
+
+func (x *GetFinanceDemoRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[31]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetFinanceDemoRequest.ProtoReflect.Descriptor instead.
+func (*GetFinanceDemoRequest) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{31}
+}
+
+type DemoFeatureResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	ProductKey    string                 `protobuf:"bytes,1,opt,name=product_key,json=productKey,proto3" json:"product_key,omitempty"`
+	Title         string                 `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
+	Message       string                 `protobuf:"bytes,3,opt,name=message,proto3" json:"message,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *DemoFeatureResponse) Reset() {
+	*x = DemoFeatureResponse{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[32]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *DemoFeatureResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*DemoFeatureResponse) ProtoMessage() {}
+
+func (x *DemoFeatureResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[32]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use DemoFeatureResponse.ProtoReflect.Descriptor instead.
+func (*DemoFeatureResponse) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{32}
+}
+
+func (x *DemoFeatureResponse) GetProductKey() string {
+	if x != nil {
+		return x.ProductKey
+	}
+	return ""
+}
+
+func (x *DemoFeatureResponse) GetTitle() string {
+	if x != nil {
+		return x.Title
+	}
+	return ""
+}
+
+func (x *DemoFeatureResponse) GetMessage() string {
+	if x != nil {
+		return x.Message
+	}
+	return ""
+}
+
+type Session struct {
+	state          protoimpl.MessageState `protogen:"open.v1"`
+	Id             string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	UserId         string                 `protobuf:"bytes,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	ActiveTenantId string                 `protobuf:"bytes,3,opt,name=active_tenant_id,json=activeTenantId,proto3" json:"active_tenant_id,omitempty"`
+	ExpiresAt      string                 `protobuf:"bytes,4,opt,name=expires_at,json=expiresAt,proto3" json:"expires_at,omitempty"`
+	unknownFields  protoimpl.UnknownFields
+	sizeCache      protoimpl.SizeCache
+}
+
+func (x *Session) Reset() {
+	*x = Session{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[33]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *Session) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Session) ProtoMessage() {}
+
+func (x *Session) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[33]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Session.ProtoReflect.Descriptor instead.
+func (*Session) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{33}
+}
+
+func (x *Session) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *Session) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *Session) GetActiveTenantId() string {
+	if x != nil {
+		return x.ActiveTenantId
+	}
+	return ""
+}
+
+func (x *Session) GetExpiresAt() string {
+	if x != nil {
+		return x.ExpiresAt
+	}
+	return ""
+}
+
+type AccessSnapshot struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	User          *AccessUser            `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"`
+	ActiveTenant  *ActiveTenant          `protobuf:"bytes,2,opt,name=active_tenant,json=activeTenant,proto3" json:"active_tenant,omitempty"`
+	Tenants       []*TenantSummary       `protobuf:"bytes,3,rep,name=tenants,proto3" json:"tenants,omitempty"`
+	Products      []*ProductAccess       `protobuf:"bytes,4,rep,name=products,proto3" json:"products,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *AccessSnapshot) Reset() {
+	*x = AccessSnapshot{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[34]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *AccessSnapshot) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AccessSnapshot) ProtoMessage() {}
+
+func (x *AccessSnapshot) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[34]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AccessSnapshot.ProtoReflect.Descriptor instead.
+func (*AccessSnapshot) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{34}
+}
+
+func (x *AccessSnapshot) GetUser() *AccessUser {
+	if x != nil {
+		return x.User
+	}
+	return nil
+}
+
+func (x *AccessSnapshot) GetActiveTenant() *ActiveTenant {
+	if x != nil {
+		return x.ActiveTenant
+	}
+	return nil
+}
+
+func (x *AccessSnapshot) GetTenants() []*TenantSummary {
+	if x != nil {
+		return x.Tenants
+	}
+	return nil
+}
+
+func (x *AccessSnapshot) GetProducts() []*ProductAccess {
+	if x != nil {
+		return x.Products
+	}
+	return nil
+}
+
+type AccessUser struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Email         string                 `protobuf:"bytes,2,opt,name=email,proto3" json:"email,omitempty"`
+	DisplayName   string                 `protobuf:"bytes,3,opt,name=display_name,json=displayName,proto3" json:"display_name,omitempty"`
+	PlatformRole  string                 `protobuf:"bytes,4,opt,name=platform_role,json=platformRole,proto3" json:"platform_role,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *AccessUser) Reset() {
+	*x = AccessUser{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[35]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *AccessUser) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AccessUser) ProtoMessage() {}
+
+func (x *AccessUser) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[35]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AccessUser.ProtoReflect.Descriptor instead.
+func (*AccessUser) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{35}
+}
+
+func (x *AccessUser) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *AccessUser) GetEmail() string {
+	if x != nil {
+		return x.Email
+	}
+	return ""
+}
+
+func (x *AccessUser) GetDisplayName() string {
+	if x != nil {
+		return x.DisplayName
+	}
+	return ""
+}
+
+func (x *AccessUser) GetPlatformRole() string {
+	if x != nil {
+		return x.PlatformRole
+	}
+	return ""
+}
+
+type ActiveTenant struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Name          string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Slug          string                 `protobuf:"bytes,3,opt,name=slug,proto3" json:"slug,omitempty"`
+	Role          string                 `protobuf:"bytes,4,opt,name=role,proto3" json:"role,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ActiveTenant) Reset() {
+	*x = ActiveTenant{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[36]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ActiveTenant) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ActiveTenant) ProtoMessage() {}
+
+func (x *ActiveTenant) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[36]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ActiveTenant.ProtoReflect.Descriptor instead.
+func (*ActiveTenant) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{36}
+}
+
+func (x *ActiveTenant) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *ActiveTenant) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *ActiveTenant) GetSlug() string {
+	if x != nil {
+		return x.Slug
+	}
+	return ""
+}
+
+func (x *ActiveTenant) GetRole() string {
+	if x != nil {
+		return x.Role
+	}
+	return ""
+}
+
+type TenantSummary struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Name          string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Slug          string                 `protobuf:"bytes,3,opt,name=slug,proto3" json:"slug,omitempty"`
+	Role          string                 `protobuf:"bytes,4,opt,name=role,proto3" json:"role,omitempty"`
+	Status        string                 `protobuf:"bytes,5,opt,name=status,proto3" json:"status,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *TenantSummary) Reset() {
+	*x = TenantSummary{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[37]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *TenantSummary) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*TenantSummary) ProtoMessage() {}
+
+func (x *TenantSummary) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[37]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use TenantSummary.ProtoReflect.Descriptor instead.
+func (*TenantSummary) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{37}
+}
+
+func (x *TenantSummary) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *TenantSummary) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *TenantSummary) GetSlug() string {
+	if x != nil {
+		return x.Slug
+	}
+	return ""
+}
+
+func (x *TenantSummary) GetRole() string {
+	if x != nil {
+		return x.Role
+	}
+	return ""
+}
+
+func (x *TenantSummary) GetStatus() string {
+	if x != nil {
+		return x.Status
+	}
+	return ""
+}
+
+type ProductAccess struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Key           string                 `protobuf:"bytes,1,opt,name=key,proto3" json:"key,omitempty"`
+	Name          string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Status        string                 `protobuf:"bytes,3,opt,name=status,proto3" json:"status,omitempty"`
+	Assigned      bool                   `protobuf:"varint,4,opt,name=assigned,proto3" json:"assigned,omitempty"`
+	Role          string                 `protobuf:"bytes,5,opt,name=role,proto3" json:"role,omitempty"`
+	Permissions   []string               `protobuf:"bytes,6,rep,name=permissions,proto3" json:"permissions,omitempty"`
+	SeatsTotal    int32                  `protobuf:"varint,7,opt,name=seats_total,json=seatsTotal,proto3" json:"seats_total,omitempty"`
+	SeatsUsed     int32                  `protobuf:"varint,8,opt,name=seats_used,json=seatsUsed,proto3" json:"seats_used,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ProductAccess) Reset() {
+	*x = ProductAccess{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[38]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProductAccess) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProductAccess) ProtoMessage() {}
+
+func (x *ProductAccess) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[38]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProductAccess.ProtoReflect.Descriptor instead.
+func (*ProductAccess) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{38}
+}
+
+func (x *ProductAccess) GetKey() string {
+	if x != nil {
+		return x.Key
+	}
+	return ""
+}
+
+func (x *ProductAccess) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *ProductAccess) GetStatus() string {
+	if x != nil {
+		return x.Status
+	}
+	return ""
+}
+
+func (x *ProductAccess) GetAssigned() bool {
+	if x != nil {
+		return x.Assigned
+	}
+	return false
+}
+
+func (x *ProductAccess) GetRole() string {
+	if x != nil {
+		return x.Role
+	}
+	return ""
+}
+
+func (x *ProductAccess) GetPermissions() []string {
+	if x != nil {
+		return x.Permissions
+	}
+	return nil
+}
+
+func (x *ProductAccess) GetSeatsTotal() int32 {
+	if x != nil {
+		return x.SeatsTotal
+	}
+	return 0
+}
+
+func (x *ProductAccess) GetSeatsUsed() int32 {
+	if x != nil {
+		return x.SeatsUsed
+	}
+	return 0
+}
+
+type TenantMember struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	UserId        string                 `protobuf:"bytes,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	Email         string                 `protobuf:"bytes,2,opt,name=email,proto3" json:"email,omitempty"`
+	DisplayName   string                 `protobuf:"bytes,3,opt,name=display_name,json=displayName,proto3" json:"display_name,omitempty"`
+	TenantRole    string                 `protobuf:"bytes,4,opt,name=tenant_role,json=tenantRole,proto3" json:"tenant_role,omitempty"`
+	Status        string                 `protobuf:"bytes,5,opt,name=status,proto3" json:"status,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *TenantMember) Reset() {
+	*x = TenantMember{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[39]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *TenantMember) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*TenantMember) ProtoMessage() {}
+
+func (x *TenantMember) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[39]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use TenantMember.ProtoReflect.Descriptor instead.
+func (*TenantMember) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{39}
+}
+
+func (x *TenantMember) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *TenantMember) GetEmail() string {
+	if x != nil {
+		return x.Email
+	}
+	return ""
+}
+
+func (x *TenantMember) GetDisplayName() string {
+	if x != nil {
+		return x.DisplayName
+	}
+	return ""
+}
+
+func (x *TenantMember) GetTenantRole() string {
+	if x != nil {
+		return x.TenantRole
+	}
+	return ""
+}
+
+func (x *TenantMember) GetStatus() string {
+	if x != nil {
+		return x.Status
+	}
+	return ""
+}
+
+type ProductLicense struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ProductKey    string                 `protobuf:"bytes,2,opt,name=product_key,json=productKey,proto3" json:"product_key,omitempty"`
+	ProductName   string                 `protobuf:"bytes,3,opt,name=product_name,json=productName,proto3" json:"product_name,omitempty"`
+	SeatsTotal    int32                  `protobuf:"varint,4,opt,name=seats_total,json=seatsTotal,proto3" json:"seats_total,omitempty"`
+	SeatsUsed     int32                  `protobuf:"varint,5,opt,name=seats_used,json=seatsUsed,proto3" json:"seats_used,omitempty"`
+	Status        string                 `protobuf:"bytes,6,opt,name=status,proto3" json:"status,omitempty"`
+	Source        string                 `protobuf:"bytes,7,opt,name=source,proto3" json:"source,omitempty"`
+	UpdatedAt     string                 `protobuf:"bytes,8,opt,name=updated_at,json=updatedAt,proto3" json:"updated_at,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ProductLicense) Reset() {
+	*x = ProductLicense{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[40]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProductLicense) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProductLicense) ProtoMessage() {}
+
+func (x *ProductLicense) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[40]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProductLicense.ProtoReflect.Descriptor instead.
+func (*ProductLicense) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{40}
+}
+
+func (x *ProductLicense) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *ProductLicense) GetProductKey() string {
+	if x != nil {
+		return x.ProductKey
+	}
+	return ""
+}
+
+func (x *ProductLicense) GetProductName() string {
+	if x != nil {
+		return x.ProductName
+	}
+	return ""
+}
+
+func (x *ProductLicense) GetSeatsTotal() int32 {
+	if x != nil {
+		return x.SeatsTotal
+	}
+	return 0
+}
+
+func (x *ProductLicense) GetSeatsUsed() int32 {
+	if x != nil {
+		return x.SeatsUsed
+	}
+	return 0
+}
+
+func (x *ProductLicense) GetStatus() string {
+	if x != nil {
+		return x.Status
+	}
+	return ""
+}
+
+func (x *ProductLicense) GetSource() string {
+	if x != nil {
+		return x.Source
+	}
+	return ""
+}
+
+func (x *ProductLicense) GetUpdatedAt() string {
+	if x != nil {
+		return x.UpdatedAt
+	}
+	return ""
+}
+
+type ProductAssignment struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	TenantId      string                 `protobuf:"bytes,2,opt,name=tenant_id,json=tenantId,proto3" json:"tenant_id,omitempty"`
+	UserId        string                 `protobuf:"bytes,3,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	Email         string                 `protobuf:"bytes,4,opt,name=email,proto3" json:"email,omitempty"`
+	DisplayName   string                 `protobuf:"bytes,5,opt,name=display_name,json=displayName,proto3" json:"display_name,omitempty"`
+	ProductKey    string                 `protobuf:"bytes,6,opt,name=product_key,json=productKey,proto3" json:"product_key,omitempty"`
+	ProductName   string                 `protobuf:"bytes,7,opt,name=product_name,json=productName,proto3" json:"product_name,omitempty"`
+	Role          string                 `protobuf:"bytes,8,opt,name=role,proto3" json:"role,omitempty"`
+	Status        string                 `protobuf:"bytes,9,opt,name=status,proto3" json:"status,omitempty"`
+	AssignedAt    string                 `protobuf:"bytes,10,opt,name=assigned_at,json=assignedAt,proto3" json:"assigned_at,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ProductAssignment) Reset() {
+	*x = ProductAssignment{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[41]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ProductAssignment) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProductAssignment) ProtoMessage() {}
+
+func (x *ProductAssignment) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[41]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProductAssignment.ProtoReflect.Descriptor instead.
+func (*ProductAssignment) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{41}
+}
+
+func (x *ProductAssignment) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *ProductAssignment) GetTenantId() string {
+	if x != nil {
+		return x.TenantId
+	}
+	return ""
+}
+
+func (x *ProductAssignment) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *ProductAssignment) GetEmail() string {
+	if x != nil {
+		return x.Email
+	}
+	return ""
+}
+
+func (x *ProductAssignment) GetDisplayName() string {
+	if x != nil {
+		return x.DisplayName
+	}
+	return ""
+}
+
+func (x *ProductAssignment) GetProductKey() string {
+	if x != nil {
+		return x.ProductKey
+	}
+	return ""
+}
+
+func (x *ProductAssignment) GetProductName() string {
+	if x != nil {
+		return x.ProductName
+	}
+	return ""
+}
+
+func (x *ProductAssignment) GetRole() string {
+	if x != nil {
+		return x.Role
+	}
+	return ""
+}
+
+func (x *ProductAssignment) GetStatus() string {
+	if x != nil {
+		return x.Status
+	}
+	return ""
+}
+
+func (x *ProductAssignment) GetAssignedAt() string {
+	if x != nil {
+		return x.AssignedAt
+	}
+	return ""
+}
+
+type LicenseEvent struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ProductKey    string                 `protobuf:"bytes,2,opt,name=product_key,json=productKey,proto3" json:"product_key,omitempty"`
+	Type          string                 `protobuf:"bytes,3,opt,name=type,proto3" json:"type,omitempty"`
+	SeatsBefore   int32                  `protobuf:"varint,4,opt,name=seats_before,json=seatsBefore,proto3" json:"seats_before,omitempty"`
+	SeatsAfter    int32                  `protobuf:"varint,5,opt,name=seats_after,json=seatsAfter,proto3" json:"seats_after,omitempty"`
+	Source        string                 `protobuf:"bytes,6,opt,name=source,proto3" json:"source,omitempty"`
+	ActorUserId   string                 `protobuf:"bytes,7,opt,name=actor_user_id,json=actorUserId,proto3" json:"actor_user_id,omitempty"`
+	CreatedAt     string                 `protobuf:"bytes,8,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *LicenseEvent) Reset() {
+	*x = LicenseEvent{}
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[42]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *LicenseEvent) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*LicenseEvent) ProtoMessage() {}
+
+func (x *LicenseEvent) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_links_backend_v1_backend_proto_msgTypes[42]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use LicenseEvent.ProtoReflect.Descriptor instead.
+func (*LicenseEvent) Descriptor() ([]byte, []int) {
+	return file_proto_links_backend_v1_backend_proto_rawDescGZIP(), []int{42}
+}
+
+func (x *LicenseEvent) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *LicenseEvent) GetProductKey() string {
+	if x != nil {
+		return x.ProductKey
+	}
+	return ""
+}
+
+func (x *LicenseEvent) GetType() string {
+	if x != nil {
+		return x.Type
+	}
+	return ""
+}
+
+func (x *LicenseEvent) GetSeatsBefore() int32 {
+	if x != nil {
+		return x.SeatsBefore
+	}
+	return 0
+}
+
+func (x *LicenseEvent) GetSeatsAfter() int32 {
+	if x != nil {
+		return x.SeatsAfter
+	}
+	return 0
+}
+
+func (x *LicenseEvent) GetSource() string {
+	if x != nil {
+		return x.Source
+	}
+	return ""
+}
+
+func (x *LicenseEvent) GetActorUserId() string {
+	if x != nil {
+		return x.ActorUserId
+	}
+	return ""
+}
+
+func (x *LicenseEvent) GetCreatedAt() string {
+	if x != nil {
+		return x.CreatedAt
+	}
+	return ""
+}
+
 var File_proto_links_backend_v1_backend_proto protoreflect.FileDescriptor
 
 const file_proto_links_backend_v1_backend_proto_rawDesc = "" +
@@ -117,9 +2409,203 @@ const file_proto_links_backend_v1_backend_proto_rawDesc = "" +
 	"\x10GetHealthRequest\";\n" +
 	"\x11GetHealthResponse\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x0e\n" +
-	"\x02db\x18\x02 \x01(\tR\x02db2f\n" +
+	"\x02db\x18\x02 \x01(\tR\x02db\"\x87\x01\n" +
+	"\x0fRegisterRequest\x12\x14\n" +
+	"\x05email\x18\x01 \x01(\tR\x05email\x12\x1a\n" +
+	"\bpassword\x18\x02 \x01(\tR\bpassword\x12!\n" +
+	"\fdisplay_name\x18\x03 \x01(\tR\vdisplayName\x12\x1f\n" +
+	"\vtenant_name\x18\x04 \x01(\tR\n" +
+	"tenantName\"@\n" +
+	"\fLoginRequest\x12\x14\n" +
+	"\x05email\x18\x01 \x01(\tR\x05email\x12\x1a\n" +
+	"\bpassword\x18\x02 \x01(\tR\bpassword\"}\n" +
+	"\fAuthResponse\x123\n" +
+	"\asession\x18\x01 \x01(\v2\x19.links.backend.v1.SessionR\asession\x128\n" +
+	"\x06access\x18\x02 \x01(\v2 .links.backend.v1.AccessSnapshotR\x06access\"\x0f\n" +
+	"\rLogoutRequest\" \n" +
+	"\x0eLogoutResponse\x12\x0e\n" +
+	"\x02ok\x18\x01 \x01(\bR\x02ok\"\x13\n" +
+	"\x11GetSessionRequest\"\xa9\x01\n" +
+	"\x12GetSessionResponse\x12$\n" +
+	"\rauthenticated\x18\x01 \x01(\bR\rauthenticated\x123\n" +
+	"\asession\x18\x02 \x01(\v2\x19.links.backend.v1.SessionR\asession\x128\n" +
+	"\x06access\x18\x03 \x01(\v2 .links.backend.v1.AccessSnapshotR\x06access\"\x16\n" +
+	"\x14ListMyTenantsRequest\"R\n" +
+	"\x15ListMyTenantsResponse\x129\n" +
+	"\atenants\x18\x01 \x03(\v2\x1f.links.backend.v1.TenantSummaryR\atenants\"2\n" +
+	"\x13SwitchTenantRequest\x12\x1b\n" +
+	"\ttenant_id\x18\x01 \x01(\tR\btenantId\"\x1a\n" +
+	"\x18GetAccessSnapshotRequest\"R\n" +
+	"\x16AccessSnapshotResponse\x128\n" +
+	"\x06access\x18\x01 \x01(\v2 .links.backend.v1.AccessSnapshotR\x06access\"\x1a\n" +
+	"\x18ListTenantMembersRequest\"U\n" +
+	"\x19ListTenantMembersResponse\x128\n" +
+	"\amembers\x18\x01 \x03(\v2\x1e.links.backend.v1.TenantMemberR\amembers\"u\n" +
+	"\x19InviteTenantMemberRequest\x12\x14\n" +
+	"\x05email\x18\x01 \x01(\tR\x05email\x12!\n" +
+	"\fdisplay_name\x18\x02 \x01(\tR\vdisplayName\x12\x1f\n" +
+	"\vtenant_role\x18\x03 \x01(\tR\n" +
+	"tenantRole\"w\n" +
+	"\x1aInviteTenantMemberResponse\x126\n" +
+	"\x06member\x18\x01 \x01(\v2\x1e.links.backend.v1.TenantMemberR\x06member\x12!\n" +
+	"\finvite_token\x18\x02 \x01(\tR\vinviteToken\"}\n" +
+	"\x19AcceptTenantInviteRequest\x12!\n" +
+	"\finvite_token\x18\x01 \x01(\tR\vinviteToken\x12!\n" +
+	"\fdisplay_name\x18\x02 \x01(\tR\vdisplayName\x12\x1a\n" +
+	"\bpassword\x18\x03 \x01(\tR\bpassword\"\x1a\n" +
+	"\x18GetTenantLicensesRequest\"Y\n" +
+	"\x19GetTenantLicensesResponse\x12<\n" +
+	"\blicenses\x18\x01 \x03(\v2 .links.backend.v1.ProductLicenseR\blicenses\"b\n" +
+	"\x1eSetMyTenantProductSeatsRequest\x12\x1f\n" +
+	"\vproduct_key\x18\x01 \x01(\tR\n" +
+	"productKey\x12\x1f\n" +
+	"\vseats_total\x18\x02 \x01(\x05R\n" +
+	"seatsTotal\"]\n" +
+	"\x1fSetMyTenantProductSeatsResponse\x12:\n" +
+	"\alicense\x18\x01 \x01(\v2 .links.backend.v1.ProductLicenseR\alicense\"\x1a\n" +
+	"\x18ListLicenseEventsRequest\"S\n" +
+	"\x19ListLicenseEventsResponse\x126\n" +
+	"\x06events\x18\x01 \x03(\v2\x1e.links.backend.v1.LicenseEventR\x06events\"@\n" +
+	"\x1dListProductAssignmentsRequest\x12\x1f\n" +
+	"\vproduct_key\x18\x01 \x01(\tR\n" +
+	"productKey\"g\n" +
+	"\x1eListProductAssignmentsResponse\x12E\n" +
+	"\vassignments\x18\x01 \x03(\v2#.links.backend.v1.ProductAssignmentR\vassignments\"j\n" +
+	"\x1aAssignUserToProductRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12\x1f\n" +
+	"\vproduct_key\x18\x02 \x01(\tR\n" +
+	"productKey\x12\x12\n" +
+	"\x04role\x18\x03 \x01(\tR\x04role\"X\n" +
+	"\x1cRemoveUserFromProductRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12\x1f\n" +
+	"\vproduct_key\x18\x02 \x01(\tR\n" +
+	"productKey\"h\n" +
+	"\x18UpdateProductRoleRequest\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12\x1f\n" +
+	"\vproduct_key\x18\x02 \x01(\tR\n" +
+	"productKey\x12\x12\n" +
+	"\x04role\x18\x03 \x01(\tR\x04role\"\x17\n" +
+	"\x15GetPlannerDemoRequest\"\x17\n" +
+	"\x15GetFinanceDemoRequest\"f\n" +
+	"\x13DemoFeatureResponse\x12\x1f\n" +
+	"\vproduct_key\x18\x01 \x01(\tR\n" +
+	"productKey\x12\x14\n" +
+	"\x05title\x18\x02 \x01(\tR\x05title\x12\x18\n" +
+	"\amessage\x18\x03 \x01(\tR\amessage\"{\n" +
+	"\aSession\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x17\n" +
+	"\auser_id\x18\x02 \x01(\tR\x06userId\x12(\n" +
+	"\x10active_tenant_id\x18\x03 \x01(\tR\x0eactiveTenantId\x12\x1d\n" +
+	"\n" +
+	"expires_at\x18\x04 \x01(\tR\texpiresAt\"\xff\x01\n" +
+	"\x0eAccessSnapshot\x120\n" +
+	"\x04user\x18\x01 \x01(\v2\x1c.links.backend.v1.AccessUserR\x04user\x12C\n" +
+	"\ractive_tenant\x18\x02 \x01(\v2\x1e.links.backend.v1.ActiveTenantR\factiveTenant\x129\n" +
+	"\atenants\x18\x03 \x03(\v2\x1f.links.backend.v1.TenantSummaryR\atenants\x12;\n" +
+	"\bproducts\x18\x04 \x03(\v2\x1f.links.backend.v1.ProductAccessR\bproducts\"z\n" +
+	"\n" +
+	"AccessUser\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x14\n" +
+	"\x05email\x18\x02 \x01(\tR\x05email\x12!\n" +
+	"\fdisplay_name\x18\x03 \x01(\tR\vdisplayName\x12#\n" +
+	"\rplatform_role\x18\x04 \x01(\tR\fplatformRole\"Z\n" +
+	"\fActiveTenant\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
+	"\x04name\x18\x02 \x01(\tR\x04name\x12\x12\n" +
+	"\x04slug\x18\x03 \x01(\tR\x04slug\x12\x12\n" +
+	"\x04role\x18\x04 \x01(\tR\x04role\"s\n" +
+	"\rTenantSummary\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
+	"\x04name\x18\x02 \x01(\tR\x04name\x12\x12\n" +
+	"\x04slug\x18\x03 \x01(\tR\x04slug\x12\x12\n" +
+	"\x04role\x18\x04 \x01(\tR\x04role\x12\x16\n" +
+	"\x06status\x18\x05 \x01(\tR\x06status\"\xdf\x01\n" +
+	"\rProductAccess\x12\x10\n" +
+	"\x03key\x18\x01 \x01(\tR\x03key\x12\x12\n" +
+	"\x04name\x18\x02 \x01(\tR\x04name\x12\x16\n" +
+	"\x06status\x18\x03 \x01(\tR\x06status\x12\x1a\n" +
+	"\bassigned\x18\x04 \x01(\bR\bassigned\x12\x12\n" +
+	"\x04role\x18\x05 \x01(\tR\x04role\x12 \n" +
+	"\vpermissions\x18\x06 \x03(\tR\vpermissions\x12\x1f\n" +
+	"\vseats_total\x18\a \x01(\x05R\n" +
+	"seatsTotal\x12\x1d\n" +
+	"\n" +
+	"seats_used\x18\b \x01(\x05R\tseatsUsed\"\x99\x01\n" +
+	"\fTenantMember\x12\x17\n" +
+	"\auser_id\x18\x01 \x01(\tR\x06userId\x12\x14\n" +
+	"\x05email\x18\x02 \x01(\tR\x05email\x12!\n" +
+	"\fdisplay_name\x18\x03 \x01(\tR\vdisplayName\x12\x1f\n" +
+	"\vtenant_role\x18\x04 \x01(\tR\n" +
+	"tenantRole\x12\x16\n" +
+	"\x06status\x18\x05 \x01(\tR\x06status\"\xf3\x01\n" +
+	"\x0eProductLicense\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1f\n" +
+	"\vproduct_key\x18\x02 \x01(\tR\n" +
+	"productKey\x12!\n" +
+	"\fproduct_name\x18\x03 \x01(\tR\vproductName\x12\x1f\n" +
+	"\vseats_total\x18\x04 \x01(\x05R\n" +
+	"seatsTotal\x12\x1d\n" +
+	"\n" +
+	"seats_used\x18\x05 \x01(\x05R\tseatsUsed\x12\x16\n" +
+	"\x06status\x18\x06 \x01(\tR\x06status\x12\x16\n" +
+	"\x06source\x18\a \x01(\tR\x06source\x12\x1d\n" +
+	"\n" +
+	"updated_at\x18\b \x01(\tR\tupdatedAt\"\xa3\x02\n" +
+	"\x11ProductAssignment\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1b\n" +
+	"\ttenant_id\x18\x02 \x01(\tR\btenantId\x12\x17\n" +
+	"\auser_id\x18\x03 \x01(\tR\x06userId\x12\x14\n" +
+	"\x05email\x18\x04 \x01(\tR\x05email\x12!\n" +
+	"\fdisplay_name\x18\x05 \x01(\tR\vdisplayName\x12\x1f\n" +
+	"\vproduct_key\x18\x06 \x01(\tR\n" +
+	"productKey\x12!\n" +
+	"\fproduct_name\x18\a \x01(\tR\vproductName\x12\x12\n" +
+	"\x04role\x18\b \x01(\tR\x04role\x12\x16\n" +
+	"\x06status\x18\t \x01(\tR\x06status\x12\x1f\n" +
+	"\vassigned_at\x18\n" +
+	" \x01(\tR\n" +
+	"assignedAt\"\xf2\x01\n" +
+	"\fLicenseEvent\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1f\n" +
+	"\vproduct_key\x18\x02 \x01(\tR\n" +
+	"productKey\x12\x12\n" +
+	"\x04type\x18\x03 \x01(\tR\x04type\x12!\n" +
+	"\fseats_before\x18\x04 \x01(\x05R\vseatsBefore\x12\x1f\n" +
+	"\vseats_after\x18\x05 \x01(\x05R\n" +
+	"seatsAfter\x12\x16\n" +
+	"\x06source\x18\x06 \x01(\tR\x06source\x12\"\n" +
+	"\ractor_user_id\x18\a \x01(\tR\vactorUserId\x12\x1d\n" +
+	"\n" +
+	"created_at\x18\b \x01(\tR\tcreatedAt2f\n" +
 	"\x0eBackendService\x12T\n" +
-	"\tGetHealth\x12\".links.backend.v1.GetHealthRequest\x1a#.links.backend.v1.GetHealthResponseBHZFgithub.com/links/backend/internal/gen/proto/links/backend/v1;backendv1b\x06proto3"
+	"\tGetHealth\x12\".links.backend.v1.GetHealthRequest\x1a#.links.backend.v1.GetHealthResponse2\xcb\x02\n" +
+	"\vAuthService\x12M\n" +
+	"\bRegister\x12!.links.backend.v1.RegisterRequest\x1a\x1e.links.backend.v1.AuthResponse\x12G\n" +
+	"\x05Login\x12\x1e.links.backend.v1.LoginRequest\x1a\x1e.links.backend.v1.AuthResponse\x12K\n" +
+	"\x06Logout\x12\x1f.links.backend.v1.LogoutRequest\x1a .links.backend.v1.LogoutResponse\x12W\n" +
+	"\n" +
+	"GetSession\x12#.links.backend.v1.GetSessionRequest\x1a$.links.backend.v1.GetSessionResponse2\xd2\x01\n" +
+	"\rTenantService\x12`\n" +
+	"\rListMyTenants\x12&.links.backend.v1.ListMyTenantsRequest\x1a'.links.backend.v1.ListMyTenantsResponse\x12_\n" +
+	"\fSwitchTenant\x12%.links.backend.v1.SwitchTenantRequest\x1a(.links.backend.v1.AccessSnapshotResponse2\x7f\n" +
+	"\x12EntitlementService\x12i\n" +
+	"\x11GetAccessSnapshot\x12*.links.backend.v1.GetAccessSnapshotRequest\x1a(.links.backend.v1.AccessSnapshotResponse2\xd5\x02\n" +
+	"\x11MembershipService\x12l\n" +
+	"\x11ListTenantMembers\x12*.links.backend.v1.ListTenantMembersRequest\x1a+.links.backend.v1.ListTenantMembersResponse\x12o\n" +
+	"\x12InviteTenantMember\x12+.links.backend.v1.InviteTenantMemberRequest\x1a,.links.backend.v1.InviteTenantMemberResponse\x12a\n" +
+	"\x12AcceptTenantInvite\x12+.links.backend.v1.AcceptTenantInviteRequest\x1a\x1e.links.backend.v1.AuthResponse2\xee\x02\n" +
+	"\x10LicensingService\x12l\n" +
+	"\x11GetTenantLicenses\x12*.links.backend.v1.GetTenantLicensesRequest\x1a+.links.backend.v1.GetTenantLicensesResponse\x12~\n" +
+	"\x17SetMyTenantProductSeats\x120.links.backend.v1.SetMyTenantProductSeatsRequest\x1a1.links.backend.v1.SetMyTenantProductSeatsResponse\x12l\n" +
+	"\x11ListLicenseEvents\x12*.links.backend.v1.ListLicenseEventsRequest\x1a+.links.backend.v1.ListLicenseEventsResponse2\xce\x03\n" +
+	"\x11AssignmentService\x12{\n" +
+	"\x16ListProductAssignments\x12/.links.backend.v1.ListProductAssignmentsRequest\x1a0.links.backend.v1.ListProductAssignmentsResponse\x12h\n" +
+	"\x13AssignUserToProduct\x12,.links.backend.v1.AssignUserToProductRequest\x1a#.links.backend.v1.ProductAssignment\x12l\n" +
+	"\x15RemoveUserFromProduct\x12..links.backend.v1.RemoveUserFromProductRequest\x1a#.links.backend.v1.ProductAssignment\x12d\n" +
+	"\x11UpdateProductRole\x12*.links.backend.v1.UpdateProductRoleRequest\x1a#.links.backend.v1.ProductAssignment2\xd1\x01\n" +
+	"\vDemoService\x12`\n" +
+	"\x0eGetPlannerDemo\x12'.links.backend.v1.GetPlannerDemoRequest\x1a%.links.backend.v1.DemoFeatureResponse\x12`\n" +
+	"\x0eGetFinanceDemo\x12'.links.backend.v1.GetFinanceDemoRequest\x1a%.links.backend.v1.DemoFeatureResponseBHZFgithub.com/links/backend/internal/gen/proto/links/backend/v1;backendv1b\x06proto3"
 
 var (
 	file_proto_links_backend_v1_backend_proto_rawDescOnce sync.Once
@@ -133,19 +2619,114 @@ func file_proto_links_backend_v1_backend_proto_rawDescGZIP() []byte {
 	return file_proto_links_backend_v1_backend_proto_rawDescData
 }
 
-var file_proto_links_backend_v1_backend_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_proto_links_backend_v1_backend_proto_msgTypes = make([]protoimpl.MessageInfo, 43)
 var file_proto_links_backend_v1_backend_proto_goTypes = []any{
-	(*GetHealthRequest)(nil),  // 0: links.backend.v1.GetHealthRequest
-	(*GetHealthResponse)(nil), // 1: links.backend.v1.GetHealthResponse
+	(*GetHealthRequest)(nil),                // 0: links.backend.v1.GetHealthRequest
+	(*GetHealthResponse)(nil),               // 1: links.backend.v1.GetHealthResponse
+	(*RegisterRequest)(nil),                 // 2: links.backend.v1.RegisterRequest
+	(*LoginRequest)(nil),                    // 3: links.backend.v1.LoginRequest
+	(*AuthResponse)(nil),                    // 4: links.backend.v1.AuthResponse
+	(*LogoutRequest)(nil),                   // 5: links.backend.v1.LogoutRequest
+	(*LogoutResponse)(nil),                  // 6: links.backend.v1.LogoutResponse
+	(*GetSessionRequest)(nil),               // 7: links.backend.v1.GetSessionRequest
+	(*GetSessionResponse)(nil),              // 8: links.backend.v1.GetSessionResponse
+	(*ListMyTenantsRequest)(nil),            // 9: links.backend.v1.ListMyTenantsRequest
+	(*ListMyTenantsResponse)(nil),           // 10: links.backend.v1.ListMyTenantsResponse
+	(*SwitchTenantRequest)(nil),             // 11: links.backend.v1.SwitchTenantRequest
+	(*GetAccessSnapshotRequest)(nil),        // 12: links.backend.v1.GetAccessSnapshotRequest
+	(*AccessSnapshotResponse)(nil),          // 13: links.backend.v1.AccessSnapshotResponse
+	(*ListTenantMembersRequest)(nil),        // 14: links.backend.v1.ListTenantMembersRequest
+	(*ListTenantMembersResponse)(nil),       // 15: links.backend.v1.ListTenantMembersResponse
+	(*InviteTenantMemberRequest)(nil),       // 16: links.backend.v1.InviteTenantMemberRequest
+	(*InviteTenantMemberResponse)(nil),      // 17: links.backend.v1.InviteTenantMemberResponse
+	(*AcceptTenantInviteRequest)(nil),       // 18: links.backend.v1.AcceptTenantInviteRequest
+	(*GetTenantLicensesRequest)(nil),        // 19: links.backend.v1.GetTenantLicensesRequest
+	(*GetTenantLicensesResponse)(nil),       // 20: links.backend.v1.GetTenantLicensesResponse
+	(*SetMyTenantProductSeatsRequest)(nil),  // 21: links.backend.v1.SetMyTenantProductSeatsRequest
+	(*SetMyTenantProductSeatsResponse)(nil), // 22: links.backend.v1.SetMyTenantProductSeatsResponse
+	(*ListLicenseEventsRequest)(nil),        // 23: links.backend.v1.ListLicenseEventsRequest
+	(*ListLicenseEventsResponse)(nil),       // 24: links.backend.v1.ListLicenseEventsResponse
+	(*ListProductAssignmentsRequest)(nil),   // 25: links.backend.v1.ListProductAssignmentsRequest
+	(*ListProductAssignmentsResponse)(nil),  // 26: links.backend.v1.ListProductAssignmentsResponse
+	(*AssignUserToProductRequest)(nil),      // 27: links.backend.v1.AssignUserToProductRequest
+	(*RemoveUserFromProductRequest)(nil),    // 28: links.backend.v1.RemoveUserFromProductRequest
+	(*UpdateProductRoleRequest)(nil),        // 29: links.backend.v1.UpdateProductRoleRequest
+	(*GetPlannerDemoRequest)(nil),           // 30: links.backend.v1.GetPlannerDemoRequest
+	(*GetFinanceDemoRequest)(nil),           // 31: links.backend.v1.GetFinanceDemoRequest
+	(*DemoFeatureResponse)(nil),             // 32: links.backend.v1.DemoFeatureResponse
+	(*Session)(nil),                         // 33: links.backend.v1.Session
+	(*AccessSnapshot)(nil),                  // 34: links.backend.v1.AccessSnapshot
+	(*AccessUser)(nil),                      // 35: links.backend.v1.AccessUser
+	(*ActiveTenant)(nil),                    // 36: links.backend.v1.ActiveTenant
+	(*TenantSummary)(nil),                   // 37: links.backend.v1.TenantSummary
+	(*ProductAccess)(nil),                   // 38: links.backend.v1.ProductAccess
+	(*TenantMember)(nil),                    // 39: links.backend.v1.TenantMember
+	(*ProductLicense)(nil),                  // 40: links.backend.v1.ProductLicense
+	(*ProductAssignment)(nil),               // 41: links.backend.v1.ProductAssignment
+	(*LicenseEvent)(nil),                    // 42: links.backend.v1.LicenseEvent
 }
 var file_proto_links_backend_v1_backend_proto_depIdxs = []int32{
-	0, // 0: links.backend.v1.BackendService.GetHealth:input_type -> links.backend.v1.GetHealthRequest
-	1, // 1: links.backend.v1.BackendService.GetHealth:output_type -> links.backend.v1.GetHealthResponse
-	1, // [1:2] is the sub-list for method output_type
-	0, // [0:1] is the sub-list for method input_type
-	0, // [0:0] is the sub-list for extension type_name
-	0, // [0:0] is the sub-list for extension extendee
-	0, // [0:0] is the sub-list for field type_name
+	33, // 0: links.backend.v1.AuthResponse.session:type_name -> links.backend.v1.Session
+	34, // 1: links.backend.v1.AuthResponse.access:type_name -> links.backend.v1.AccessSnapshot
+	33, // 2: links.backend.v1.GetSessionResponse.session:type_name -> links.backend.v1.Session
+	34, // 3: links.backend.v1.GetSessionResponse.access:type_name -> links.backend.v1.AccessSnapshot
+	37, // 4: links.backend.v1.ListMyTenantsResponse.tenants:type_name -> links.backend.v1.TenantSummary
+	34, // 5: links.backend.v1.AccessSnapshotResponse.access:type_name -> links.backend.v1.AccessSnapshot
+	39, // 6: links.backend.v1.ListTenantMembersResponse.members:type_name -> links.backend.v1.TenantMember
+	39, // 7: links.backend.v1.InviteTenantMemberResponse.member:type_name -> links.backend.v1.TenantMember
+	40, // 8: links.backend.v1.GetTenantLicensesResponse.licenses:type_name -> links.backend.v1.ProductLicense
+	40, // 9: links.backend.v1.SetMyTenantProductSeatsResponse.license:type_name -> links.backend.v1.ProductLicense
+	42, // 10: links.backend.v1.ListLicenseEventsResponse.events:type_name -> links.backend.v1.LicenseEvent
+	41, // 11: links.backend.v1.ListProductAssignmentsResponse.assignments:type_name -> links.backend.v1.ProductAssignment
+	35, // 12: links.backend.v1.AccessSnapshot.user:type_name -> links.backend.v1.AccessUser
+	36, // 13: links.backend.v1.AccessSnapshot.active_tenant:type_name -> links.backend.v1.ActiveTenant
+	37, // 14: links.backend.v1.AccessSnapshot.tenants:type_name -> links.backend.v1.TenantSummary
+	38, // 15: links.backend.v1.AccessSnapshot.products:type_name -> links.backend.v1.ProductAccess
+	0,  // 16: links.backend.v1.BackendService.GetHealth:input_type -> links.backend.v1.GetHealthRequest
+	2,  // 17: links.backend.v1.AuthService.Register:input_type -> links.backend.v1.RegisterRequest
+	3,  // 18: links.backend.v1.AuthService.Login:input_type -> links.backend.v1.LoginRequest
+	5,  // 19: links.backend.v1.AuthService.Logout:input_type -> links.backend.v1.LogoutRequest
+	7,  // 20: links.backend.v1.AuthService.GetSession:input_type -> links.backend.v1.GetSessionRequest
+	9,  // 21: links.backend.v1.TenantService.ListMyTenants:input_type -> links.backend.v1.ListMyTenantsRequest
+	11, // 22: links.backend.v1.TenantService.SwitchTenant:input_type -> links.backend.v1.SwitchTenantRequest
+	12, // 23: links.backend.v1.EntitlementService.GetAccessSnapshot:input_type -> links.backend.v1.GetAccessSnapshotRequest
+	14, // 24: links.backend.v1.MembershipService.ListTenantMembers:input_type -> links.backend.v1.ListTenantMembersRequest
+	16, // 25: links.backend.v1.MembershipService.InviteTenantMember:input_type -> links.backend.v1.InviteTenantMemberRequest
+	18, // 26: links.backend.v1.MembershipService.AcceptTenantInvite:input_type -> links.backend.v1.AcceptTenantInviteRequest
+	19, // 27: links.backend.v1.LicensingService.GetTenantLicenses:input_type -> links.backend.v1.GetTenantLicensesRequest
+	21, // 28: links.backend.v1.LicensingService.SetMyTenantProductSeats:input_type -> links.backend.v1.SetMyTenantProductSeatsRequest
+	23, // 29: links.backend.v1.LicensingService.ListLicenseEvents:input_type -> links.backend.v1.ListLicenseEventsRequest
+	25, // 30: links.backend.v1.AssignmentService.ListProductAssignments:input_type -> links.backend.v1.ListProductAssignmentsRequest
+	27, // 31: links.backend.v1.AssignmentService.AssignUserToProduct:input_type -> links.backend.v1.AssignUserToProductRequest
+	28, // 32: links.backend.v1.AssignmentService.RemoveUserFromProduct:input_type -> links.backend.v1.RemoveUserFromProductRequest
+	29, // 33: links.backend.v1.AssignmentService.UpdateProductRole:input_type -> links.backend.v1.UpdateProductRoleRequest
+	30, // 34: links.backend.v1.DemoService.GetPlannerDemo:input_type -> links.backend.v1.GetPlannerDemoRequest
+	31, // 35: links.backend.v1.DemoService.GetFinanceDemo:input_type -> links.backend.v1.GetFinanceDemoRequest
+	1,  // 36: links.backend.v1.BackendService.GetHealth:output_type -> links.backend.v1.GetHealthResponse
+	4,  // 37: links.backend.v1.AuthService.Register:output_type -> links.backend.v1.AuthResponse
+	4,  // 38: links.backend.v1.AuthService.Login:output_type -> links.backend.v1.AuthResponse
+	6,  // 39: links.backend.v1.AuthService.Logout:output_type -> links.backend.v1.LogoutResponse
+	8,  // 40: links.backend.v1.AuthService.GetSession:output_type -> links.backend.v1.GetSessionResponse
+	10, // 41: links.backend.v1.TenantService.ListMyTenants:output_type -> links.backend.v1.ListMyTenantsResponse
+	13, // 42: links.backend.v1.TenantService.SwitchTenant:output_type -> links.backend.v1.AccessSnapshotResponse
+	13, // 43: links.backend.v1.EntitlementService.GetAccessSnapshot:output_type -> links.backend.v1.AccessSnapshotResponse
+	15, // 44: links.backend.v1.MembershipService.ListTenantMembers:output_type -> links.backend.v1.ListTenantMembersResponse
+	17, // 45: links.backend.v1.MembershipService.InviteTenantMember:output_type -> links.backend.v1.InviteTenantMemberResponse
+	4,  // 46: links.backend.v1.MembershipService.AcceptTenantInvite:output_type -> links.backend.v1.AuthResponse
+	20, // 47: links.backend.v1.LicensingService.GetTenantLicenses:output_type -> links.backend.v1.GetTenantLicensesResponse
+	22, // 48: links.backend.v1.LicensingService.SetMyTenantProductSeats:output_type -> links.backend.v1.SetMyTenantProductSeatsResponse
+	24, // 49: links.backend.v1.LicensingService.ListLicenseEvents:output_type -> links.backend.v1.ListLicenseEventsResponse
+	26, // 50: links.backend.v1.AssignmentService.ListProductAssignments:output_type -> links.backend.v1.ListProductAssignmentsResponse
+	41, // 51: links.backend.v1.AssignmentService.AssignUserToProduct:output_type -> links.backend.v1.ProductAssignment
+	41, // 52: links.backend.v1.AssignmentService.RemoveUserFromProduct:output_type -> links.backend.v1.ProductAssignment
+	41, // 53: links.backend.v1.AssignmentService.UpdateProductRole:output_type -> links.backend.v1.ProductAssignment
+	32, // 54: links.backend.v1.DemoService.GetPlannerDemo:output_type -> links.backend.v1.DemoFeatureResponse
+	32, // 55: links.backend.v1.DemoService.GetFinanceDemo:output_type -> links.backend.v1.DemoFeatureResponse
+	36, // [36:56] is the sub-list for method output_type
+	16, // [16:36] is the sub-list for method input_type
+	16, // [16:16] is the sub-list for extension type_name
+	16, // [16:16] is the sub-list for extension extendee
+	0,  // [0:16] is the sub-list for field type_name
 }
 
 func init() { file_proto_links_backend_v1_backend_proto_init() }
@@ -159,9 +2740,9 @@ func file_proto_links_backend_v1_backend_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_links_backend_v1_backend_proto_rawDesc), len(file_proto_links_backend_v1_backend_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   2,
+			NumMessages:   43,
 			NumExtensions: 0,
-			NumServices:   1,
+			NumServices:   8,
 		},
 		GoTypes:           file_proto_links_backend_v1_backend_proto_goTypes,
 		DependencyIndexes: file_proto_links_backend_v1_backend_proto_depIdxs,

@@ -35,6 +35,7 @@
 		"vite": "^8.0.16"
 	},
 	"dependencies": {
+		"@links/auth-client": "workspace:*",
 		"@links/rpc-client": "workspace:*",
 		"@links/ui-svelte": "workspace:*"
 	}

@@ -8,9 +8,265 @@ service BackendService {
   rpc GetHealth(GetHealthRequest) returns (GetHealthResponse);
 }
 
+service AuthService {
+  rpc Register(RegisterRequest) returns (AuthResponse);
+  rpc Login(LoginRequest) returns (AuthResponse);
+  rpc Logout(LogoutRequest) returns (LogoutResponse);
+  rpc GetSession(GetSessionRequest) returns (GetSessionResponse);
+}
+
+service TenantService {
+  rpc ListMyTenants(ListMyTenantsRequest) returns (ListMyTenantsResponse);
+  rpc SwitchTenant(SwitchTenantRequest) returns (AccessSnapshotResponse);
+}
+
+service EntitlementService {
+  rpc GetAccessSnapshot(GetAccessSnapshotRequest) returns (AccessSnapshotResponse);
+}
+
+service MembershipService {
+  rpc ListTenantMembers(ListTenantMembersRequest) returns (ListTenantMembersResponse);
+  rpc InviteTenantMember(InviteTenantMemberRequest) returns (InviteTenantMemberResponse);
+  rpc AcceptTenantInvite(AcceptTenantInviteRequest) returns (AuthResponse);
+}
+
+service LicensingService {
+  rpc GetTenantLicenses(GetTenantLicensesRequest) returns (GetTenantLicensesResponse);
+  rpc SetMyTenantProductSeats(SetMyTenantProductSeatsRequest) returns (SetMyTenantProductSeatsResponse);
+  rpc ListLicenseEvents(ListLicenseEventsRequest) returns (ListLicenseEventsResponse);
+}
+
+service AssignmentService {
+  rpc ListProductAssignments(ListProductAssignmentsRequest) returns (ListProductAssignmentsResponse);
+  rpc AssignUserToProduct(AssignUserToProductRequest) returns (ProductAssignment);
+  rpc RemoveUserFromProduct(RemoveUserFromProductRequest) returns (ProductAssignment);
+  rpc UpdateProductRole(UpdateProductRoleRequest) returns (ProductAssignment);
+}
+
+service DemoService {
+  rpc GetPlannerDemo(GetPlannerDemoRequest) returns (DemoFeatureResponse);
+  rpc GetFinanceDemo(GetFinanceDemoRequest) returns (DemoFeatureResponse);
+}
+
 message GetHealthRequest {}
 
 message GetHealthResponse {
   string status = 1;
   string db = 2;
+}
+
+message RegisterRequest {
+  string email = 1;
+  string password = 2;
+  string display_name = 3;
+  string tenant_name = 4;
+}
+
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message AuthResponse {
+  Session session = 1;
+  AccessSnapshot access = 2;
+}
+
+message LogoutRequest {}
+
+message LogoutResponse {
+  bool ok = 1;
+}
+
+message GetSessionRequest {}
+
+message GetSessionResponse {
+  bool authenticated = 1;
+  Session session = 2;
+  AccessSnapshot access = 3;
+}
+
+message ListMyTenantsRequest {}
+
+message ListMyTenantsResponse {
+  repeated TenantSummary tenants = 1;
+}
+
+message SwitchTenantRequest {
+  string tenant_id = 1;
+}
+
+message GetAccessSnapshotRequest {}
+
+message AccessSnapshotResponse {
+  AccessSnapshot access = 1;
+}
+
+message ListTenantMembersRequest {}
+
+message ListTenantMembersResponse {
+  repeated TenantMember members = 1;
+}
+
+message InviteTenantMemberRequest {
+  string email = 1;
+  string display_name = 2;
+  string tenant_role = 3;
+}
+
+message InviteTenantMemberResponse {
+  TenantMember member = 1;
+  string invite_token = 2;
+}
+
+message AcceptTenantInviteRequest {
+  string invite_token = 1;
+  string display_name = 2;
+  string password = 3;
+}
+
+message GetTenantLicensesRequest {}
+
+message GetTenantLicensesResponse {
+  repeated ProductLicense licenses = 1;
+}
+
+message SetMyTenantProductSeatsRequest {
+  string product_key = 1;
+  int32 seats_total = 2;
+}
+
+message SetMyTenantProductSeatsResponse {
+  ProductLicense license = 1;
+}
+
+message ListLicenseEventsRequest {}
+
+message ListLicenseEventsResponse {
+  repeated LicenseEvent events = 1;
+}
+
+message ListProductAssignmentsRequest {
+  string product_key = 1;
+}
+
+message ListProductAssignmentsResponse {
+  repeated ProductAssignment assignments = 1;
+}
+
+message AssignUserToProductRequest {
+  string user_id = 1;
+  string product_key = 2;
+  string role = 3;
+}
+
+message RemoveUserFromProductRequest {
+  string user_id = 1;
+  string product_key = 2;
+}
+
+message UpdateProductRoleRequest {
+  string user_id = 1;
+  string product_key = 2;
+  string role = 3;
+}
+
+message GetPlannerDemoRequest {}
+
+message GetFinanceDemoRequest {}
+
+message DemoFeatureResponse {
+  string product_key = 1;
+  string title = 2;
+  string message = 3;
+}
+
+message Session {
+  string id = 1;
+  string user_id = 2;
+  string active_tenant_id = 3;
+  string expires_at = 4;
+}
+
+message AccessSnapshot {
+  AccessUser user = 1;
+  ActiveTenant active_tenant = 2;
+  repeated TenantSummary tenants = 3;
+  repeated ProductAccess products = 4;
+}
+
+message AccessUser {
+  string id = 1;
+  string email = 2;
+  string display_name = 3;
+  string platform_role = 4;
+}
+
+message ActiveTenant {
+  string id = 1;
+  string name = 2;
+  string slug = 3;
+  string role = 4;
+}
+
+message TenantSummary {
+  string id = 1;
+  string name = 2;
+  string slug = 3;
+  string role = 4;
+  string status = 5;
+}
+
+message ProductAccess {
+  string key = 1;
+  string name = 2;
+  string status = 3;
+  bool assigned = 4;
+  string role = 5;
+  repeated string permissions = 6;
+  int32 seats_total = 7;
+  int32 seats_used = 8;
+}
+
+message TenantMember {
+  string user_id = 1;
+  string email = 2;
+  string display_name = 3;
+  string tenant_role = 4;
+  string status = 5;
+}
+
+message ProductLicense {
+  string id = 1;
+  string product_key = 2;
+  string product_name = 3;
+  int32 seats_total = 4;
+  int32 seats_used = 5;
+  string status = 6;
+  string source = 7;
+  string updated_at = 8;
+}
+
+message ProductAssignment {
+  string id = 1;
+  string tenant_id = 2;
+  string user_id = 3;
+  string email = 4;
+  string display_name = 5;
+  string product_key = 6;
+  string product_name = 7;
+  string role = 8;
+  string status = 9;
+  string assigned_at = 10;
+}
+
+message LicenseEvent {
+  string id = 1;
+  string product_key = 2;
+  string type = 3;
+  int32 seats_before = 4;
+  int32 seats_after = 5;
+  string source = 6;
+  string actor_user_id = 7;
+  string created_at = 8;
 }
